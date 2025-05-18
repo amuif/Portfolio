@@ -44,14 +44,12 @@ const NavBar = () => {
   }, [isMobile]);
 
   return (
-    <div className="z-50 py-5">
-      <div>
-        {isMobile ? (
-          <MobileNav active={active} setActive={setActive} />
-        ) : (
-          <DesktopNav active={active} setActive={setActive} />
-        )}
-      </div>
+    <div className=" absolute top-0 left-0 w-full z-50 py-5 ">
+      {isMobile ? (
+        <MobileNav active={active} setActive={setActive} />
+      ) : (
+        <DesktopNav active={active} setActive={setActive} />
+      )}
     </div>
   );
 };
@@ -106,12 +104,12 @@ export function DesktopNav({
   setActive: React.Dispatch<React.SetStateAction<string>>;
 }) {
   return (
-    <div className="flex gap-10 font-bold mx-auto items-center justify-center w-full p-5">
+    <div className="flex gap-10 font-bold mx-auto items-center justify-center w-fit border-5 shadow-lg border-black/10 rounded-full px-7 py-3">
       <div className="flex gap-10 ">
         {navbarItems.map((nav) => (
           <div key={nav.id}>
             <Text
-              className={`${active === nav.href ? 'text-black dark:text-white' : 'text-muted-foreground'}`}
+              className={`${active === nav.href ? 'underline underline-offset-[10px] text-white decoration-2 decoration-primary' : 'text-muted'}`}
               onClick={() => setActive(nav.name)}
             >
               <a href={`#${nav.href}`}>{nav.name}</a>
@@ -120,7 +118,10 @@ export function DesktopNav({
         ))}
       </div>
       <div className="flex justify-end items-center gap-3 text-white">
-        <Button className="rounded-full px-5 py-3 font-bold text-base">
+        <Button
+          size="lg"
+          className="rounded-2xl bg-black/40 px-5 py-3 font-bold text-base"
+        >
           Contact me
         </Button>
       </div>
