@@ -9,7 +9,7 @@ function App() {
         <NavBar />
         <Hero />
       </div>
-      <Projects/>
+      <Projects />
     </div>
   );
 }
