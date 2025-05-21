@@ -6,37 +6,46 @@ import clsx from 'clsx';
 gsap.registerPlugin(ScrollTrigger);
 interface AnimatedTitleProps {
   title: string;
-  className: string;
+  className?: string;
 }
 const AnimatedTitle = ({ title, className }: AnimatedTitleProps) => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      gsap.set('.animated-word', {
+        opacity: 0,
+        y: 50,
+        rotationY: 60,
+        rotationX: -40,
+        transformOrigin: '50% 50% -150px',
+        willChange: 'opacity, transform',
+      });
+
       const titleAnimation = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: '100 bottom',
-          end: 'center bottom',
+          start: 'top 80%',
+          end: 'top 20%',
+          scrub: true,
           toggleActions: 'play none none reverse',
+          markers: true,
         },
       });
 
-      titleAnimation.to(
-        '.animated-word',
-        {
-          opacity: 1,
-          transform: 'translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)',
-          ease: 'power2.inOut',
-          stagger: 0.02,
-        },
-        0,
-      );
+      titleAnimation.to('.animated-word', {
+        opacity: 1,
+        y: 0,
+        rotationY: 0,
+        rotationX: 0,
+        ease: 'power2.out',
+        stagger: 0.02,
+        duration: 0.5,
+      });
     }, containerRef);
 
     return () => ctx.revert();
-  }, []);
-
+  }, [title]);
   return (
     <div
       ref={containerRef}
@@ -53,7 +62,7 @@ const AnimatedTitle = ({ title, className }: AnimatedTitleProps) => {
           {line.split(' ').map((word, idx) => (
             <span
               key={idx}
-              className="animated-word [transform:translate3d(10px,51px,-60px)_rotateY(60deg)_rotateX(-40deg)] [transform-origin:50%_50%_-150px] [will-change:opacity,transform]"
+              className="animated-word inline-block"
               dangerouslySetInnerHTML={{ __html: word + '&nbsp;' }}
             />
           ))}
@@ -62,5 +71,4 @@ const AnimatedTitle = ({ title, className }: AnimatedTitleProps) => {
     </div>
   );
 };
-
 export default AnimatedTitle;
