@@ -3,7 +3,7 @@ import { BentoTilt } from './Bento-card';
 
 const Projects = () => {
   return (
-    <section className="bg-black pb-52">
+    <section id="projects" className="bg-black pb-52">
       <div className="container mx-auto px-3 md:px-10">
         <div className="px-5 py-32">
           <p className="text-lg text-blue-50 max-w-md">Exprience</p>

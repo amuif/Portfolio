@@ -3,6 +3,8 @@ import Expreince from './components/Expreince';
 import Projects from './components/Projects';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 function App() {
   return (
     <main className="relative min-h-screen w-screen overflow-hidden">
@@ -11,6 +13,8 @@ function App() {
       <About />
       <Projects />
       <Expreince />
+      <Contact />
+      <Footer />
     </main>
   );
 }
