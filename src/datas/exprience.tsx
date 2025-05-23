@@ -1,10 +1,10 @@
-type exprienceProps = {
+type experienceProps = {
   id: number;
   name: string;
   duration: string;
   role: string;
 };
-const exprience: exprienceProps[] = [
+const experience: experienceProps[] = [
   {
     id: 1,
     name: 'Wavic',
@@ -24,4 +24,4 @@ const exprience: exprienceProps[] = [
     role: 'Leading Frontend enginner',
   },
 ];
-export default exprience;
+export default experience;

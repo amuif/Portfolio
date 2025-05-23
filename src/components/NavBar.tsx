@@ -16,7 +16,7 @@ const navMenu = [
   },
   {
     id: 3,
-    name: 'Exprience',
+    name: 'Experience',
     href: '#experience',
   },
   {
