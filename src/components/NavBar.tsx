@@ -3,28 +3,7 @@ import AnimatedTitle from './AnimatedTitle';
 import { CiMenuFries } from 'react-icons/ci';
 import { IoCloseOutline } from 'react-icons/io5';
 import { useMediaQuery } from 'react-responsive';
-const navMenu = [
-  {
-    id: 1,
-    name: 'Home',
-    href: '/',
-  },
-  {
-    id: 2,
-    name: 'Projects',
-    href: '#projects',
-  },
-  {
-    id: 3,
-    name: 'Experience',
-    href: '#experience',
-  },
-  {
-    id: 4,
-    name: 'Contact',
-    href: '#contact',
-  },
-];
+import { navMenu } from '../data/navMenu';
 const NavBar = () => {
   const navContainer = useRef(null);
   const isMobile = useMediaQuery({ query: '(max-width:1024px)' });

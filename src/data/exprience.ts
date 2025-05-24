@@ -1,10 +1,4 @@
-export type experienceProps = {
-  id: number;
-  name: string;
-  duration: string;
-  role: string;
-  description: string;
-};
+import type { experienceProps } from '../types/exprience';
 const experience: experienceProps[] = [
   {
     id: 1,

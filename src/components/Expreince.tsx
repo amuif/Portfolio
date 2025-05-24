@@ -1,9 +1,9 @@
 import AnimatedTitle from './AnimatedTitle';
-import experience, { type experienceProps } from '../data/exprience';
+import experience from '../data/exprience';
+import type { experienceProps } from '../types/exprience';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,63 +35,21 @@ const Expreince = () => {
 export default Expreince;
 
 const ExperienceItem = ({ item }: { item: experienceProps }) => {
-  const itemRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: itemRef,
-    offset: ['start end', 'end start'],
-  });
-
-  // Opacity for the role and description (fades out as item scrolls up)
-  const contentOpacity = useTransform(
-    scrollYProgress,
-    [0.4, 0.7], // Fade out between 40% and 70% of item's scroll progress
-    [1, 0], // From fully visible to fully transparent
-  );
-
-  // Scale for the role and description (optional, makes it shrink as it fades)
-  const contentScale = useTransform(
-    scrollYProgress,
-    [0.4, 0.7],
-    [1, 0.8], // Shrink to 80% size
-  );
-
-  // Y position for the name/title to slide up slightly as content fades
-  const nameY = useTransform(
-    scrollYProgress,
-    [0.4, 0.7],
-    ['0%', '-20%'], // Moves up 20% relative to its height
-  );
-
-  // Progress for this item's specific bar (0% to 100%)
-  const itemProgressBarHeight = useTransform(
-    scrollYProgress,
-    [0, 1],
-    ['0%', '100%'],
-  );
-
+  const { scrollYProgress } = useScroll();
+  const progressHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (
-    <div ref={itemRef} className="flex flex-row gap-5 h-[200px] snap-start">
-      {' '}
-      {/* Increased height & added snap-start */}
-      {/* Individual Item's Progress Bar */}
-      <div className="h-full w-2 bg-white rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
+    <div className="flex flex-row gap-5 h-[200px] snap-start">
+      <div className="h-[170px] w-2 bg-white rounded-full overflow-hidden flex items-center justify-center flex-shrink-0">
         <motion.div
-          className="bg-neutral-800 w-full origin-bottom" // Changed origin to bottom for a filling-up effect
-          style={{ scaleY: itemProgressBarHeight, originY: 1 }} // scaleY with originY: 1 for bottom-up fill
+          className="bg-neutral-800 w-full origin-bottom"
+          style={{ height: progressHeight }}
         />
       </div>
       <div className="mt-2 font-robert">
-        <motion.div
-          className="font-extrabold text-lg relative"
-          style={{ y: nameY }}
-        >
+        <motion.div className="font-extrabold text-lg relative">
           {item.name}
         </motion.div>
-        <motion.div
-          className="overflow-hidden"
-          style={{ opacity: contentOpacity, scale: contentScale }}
-        >
+        <motion.div className="overflow-hidden">
           <p className="font-semibold">{item.role}</p>
           <p className="font-light">{item.duration}</p>
           <p className="text-sm mt-1">{item.description}</p>
