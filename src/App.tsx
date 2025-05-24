@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 function App() {
   return (
-    <main className="relative min-h-screen w-screen overflow-hidden">
+    <main className="relative min-h-screen overflow-hidden">
       <NavBar />
       <Hero />
       <About />

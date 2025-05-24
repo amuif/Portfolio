@@ -23,12 +23,14 @@ const Hero = () => {
     });
   });
   return (
-    <div
-      className="bg-amber-200 min-h-screen w-full overflow-hidden"
-      id="hero-section"
-    >
-      <div className="flex items-center justify-center mx-auto my-auto  h-full w-full">
-        Hero Section
+    <div className=" min-h-screen relative px-10 " id="hero-section">
+      <div className="z-20 text-black px-5">
+        <h6 className="h-full top-28 absolute font-bold font-zentry left-0 text-2x lg:text-5xl">
+          Ibrahim
+        </h6>
+        <h6 className="absolute right-0 bottom-0 font-zentry font-bold text-2xl lg:text-5xl">
+          Hassen
+        </h6>
       </div>
     </div>
   );
