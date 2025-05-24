@@ -1,4 +1,25 @@
+@font-face {
+  font-family: zentry;
+  src: url('../public/fonts/zentry-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: robert;
+  src: url('../public/fonts/robert-regular.woff2') format('woff2');
+  font-weight: 400 700 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import 'tailwindcss';
+
+@theme {
+  --font-zentry: zentry;
+  --font-robert: robert;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
