@@ -1,24 +1,26 @@
 import BentoCard from './Bento-card';
 import { BentoTilt } from './Bento-card';
+import projects from '../data/projects';
 
 const Projects = () => {
   return (
     <section id="projects" className="bg-black pb-52">
       <div className="container mx-auto px-3 md:px-10">
         <div className="px-5 py-32">
-          <p className="text-lg text-blue-50 max-w-md">Exprience</p>
+          <p className="text-lg text-blue-50 max-w-md">Projects</p>
 
-          <p className="text-blue-50 opacity-50 text-lg max-w-md ">
+          <p className="text-blue-50 opacity-50 text-lg max-w-md pb-5 ">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
             magni doloremque voluptatem similique molestiae dolore veritatis
             facilis odit explicabo officia hic suscipit, ducimus, natus dolorum
             ratione dolor possimus exercitationem mollitia!
           </p>
-          <BentoTilt className="border border-white/20 relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
+          <BentoTilt className="border border-white/20 relative mb-7 h-[450px] w-full mx-auto  overflow-hidden rounded-md md:h-[65vh]">
             <BentoCard
-              src=""
-              title="some thing"
+              src={projects[0].image}
+              title={projects[0].name}
               description="some thing something"
+              imageClassName="px-5 h-full "
             />
           </BentoTilt>
 

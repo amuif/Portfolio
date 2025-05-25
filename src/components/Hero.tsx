@@ -25,10 +25,13 @@ const Hero = () => {
   return (
     <div className=" min-h-screen relative px-10 " id="hero-section">
       <div className="z-20 text-black px-5">
-        <h6 className="h-full top-28 absolute font-bold font-zentry left-0 text-2x lg:text-5xl">
+        <h6 className="top-32 left-5 uppercase flex flex-col  font-zentry font-black text-5xl sm:right-10 sm:text-7xl  absolute md:text-9xl lg:text-[12rem]">
           Ibrahim
+          <span className="text-base font-robert ">
+            Full-stack dev. Turning ideas into <br /> interactive web magic 🚀
+          </span>
         </h6>
-        <h6 className="absolute right-0 bottom-0 font-zentry font-bold text-2xl lg:text-5xl">
+        <h6 className="bottom-5 uppercase font-zentry font-black text-5xl right-8 sm:right-10 sm:text-7xl md:text-9xl absolute lg:text-[12rem]">
           Hassen
         </h6>
       </div>

@@ -1,26 +1,36 @@
+import clsx from 'clsx';
 import { useRef, useState, type ReactNode } from 'react';
 
 type BentoCardProps = {
   src: string;
   title: string;
   description: string;
+  imageClassName?: string;
 };
 
-const BentoCard = ({ src, title, description }: BentoCardProps) => {
+const BentoCard = ({
+  src,
+  title,
+  description,
+  imageClassName,
+}: BentoCardProps) => {
   return (
-    <div className="relative size-full">
-      <img
-        src={src}
-        alt={title}
-        className="absolute left-0 top-0 size-full object-cover object-center"
-      />
-      <div className="relative z-10 size-full flex flex-col p-5 text-blue-50">
-        <div>
-          <h6 className="relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out">
-            {title}
-          </h6>
-          {description}
-        </div>
+    <div className="relative size-full flex flex-col lg:flex-row items-center justify-between p-4">
+      <div className="relative z-10 size-full h-full flex flex-col p-5 text-white">
+        <h6 className="relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out">
+          {title}
+        </h6>
+        {description}
+      </div>
+      <div className="flex absolute items-center justify-end right-0">
+        <img
+          src={src}
+          alt={title}
+          className={clsx(
+            imageClassName,
+            'right-0 top-0 object-cover  w-full  ',
+          )}
+        />
       </div>
     </div>
   );

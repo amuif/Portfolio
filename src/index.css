@@ -1,14 +1,14 @@
 @font-face {
   font-family: zentry;
-  src: url('../public/fonts/zentry-regular.woff2') format('woff2');
-  font-weight: 400;
+  src: url('../fonts/zentry-regular.woff2') format('woff2');
+  font-weight: 400 200 300 800 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: robert;
-  src: url('../public/fonts/robert-regular.woff2') format('woff2');
+  src: url('../fonts/robert-regular.woff2') format('woff2');
   font-weight: 400 700 800;
   font-style: normal;
   font-display: swap;
