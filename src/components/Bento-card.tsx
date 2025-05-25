@@ -6,6 +6,8 @@ type BentoCardProps = {
   title: string;
   description: string;
   imageClassName?: string;
+  descriptionClassName?:string;
+  href:string;
 };
 
 const BentoCard = ({
@@ -13,24 +15,29 @@ const BentoCard = ({
   title,
   description,
   imageClassName,
+  descriptionClassName,
+  href,
 }: BentoCardProps) => {
   return (
-    <div className="relative size-full flex flex-col lg:flex-row items-center justify-between p-4">
-      <div className="relative z-10 size-full h-full flex flex-col p-5 text-white">
-        <h6 className="relative border-hsla col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out">
+    <div className="relative size-full flex flex-col gap-3 lg:flex-row items-center justify-between p-4">
+      <div className="relative z-10 size-full h-full flex flex-col p-3 text-white">
+        <h6 className="relative font-zentry uppercase  text-left w-full font-black text-xl  sm:text-3xl  md:text-5xl col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out">
           {title}
         </h6>
-        {description}
+        <p className={clsx(descriptionClassName,'font-robert text-left w-full lg:w-1/2')}>{description}</p>
       </div>
-      <div className="flex absolute items-center justify-end right-0">
+      <div className="flex absolute items-center justify-center lg:justify-end py-5 right-0">
         <img
           src={src}
           alt={title}
           className={clsx(
             imageClassName,
-            'right-0 top-0 object-cover  w-full  ',
+            'right-0 top-0 px-2 object-cover h-60 lg:h-96 py-5 size-full w-full  ',
           )}
         />
+      </div>
+      <div className='absolute bottom-7 left-5 pl-5'>
+        <button className='bg-white text-black rounded-md p-2 font-robert font-bold'><a href={href}>Live Demo</a></button>
       </div>
     </div>
   );
@@ -69,7 +76,7 @@ export const BentoTilt = ({
       ref={itemRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={className}
+      className={clsx(className,"transition-all duration-300")}
       style={{ transform: transformStyle }}
     >
       {children}

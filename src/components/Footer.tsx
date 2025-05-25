@@ -3,7 +3,8 @@ import { navMenu } from '../data/navMenu';
 
 const Footer = () => {
   return (
-    <div className="min-w-screen py-5 text-black font-robert">
+    <div className="min-w-screen py-5 text-white bg-black font-robert">
+      <hr className='text-white w-full lg:w-[90%] mx-auto py-5'/>
       <div className="flex flex-row justify-between items-center w-full lg:w-[60%] mx-auto">
         <div>
           <h1 className="font-zentry font-bold text-2xl lg:text-4xl">
