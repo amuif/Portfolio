@@ -3,5 +3,5 @@ export type projectProps = {
   name: string;
   href: string;
   image: string;
-  description:string;
+  description: string;
 };

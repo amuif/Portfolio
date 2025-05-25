@@ -25,16 +25,14 @@ const Projects = () => {
             />
           </BentoTilt>
 
-
-
           <div className="grid h-[135vh] grid-cols-1 grid-rows-2 gap-7">
             <BentoTilt className="relative border border-white/20 col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out row-spa-1 ms-32 md:col-span-1 md:ms-0">
               <BentoCard
                 src={projects[1].image}
                 title={projects[1].name}
                 description={projects[1].description}
-                imageClassName='!w-[40%] rounded-md h-full'
-                descriptionClassName='w-1/2 pr-1 text-sm py-2'
+                imageClassName="!w-[40%] rounded-md h-full"
+                descriptionClassName="w-1/2 pr-1 text-sm py-2"
                 href={projects[1].href}
               />
             </BentoTilt>

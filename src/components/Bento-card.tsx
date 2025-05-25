@@ -6,8 +6,8 @@ type BentoCardProps = {
   title: string;
   description: string;
   imageClassName?: string;
-  descriptionClassName?:string;
-  href:string;
+  descriptionClassName?: string;
+  href: string;
 };
 
 const BentoCard = ({
@@ -24,7 +24,14 @@ const BentoCard = ({
         <h6 className="relative font-zentry uppercase  text-left w-full font-black text-xl  sm:text-3xl  md:text-5xl col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out">
           {title}
         </h6>
-        <p className={clsx(descriptionClassName,'font-robert text-left w-full lg:w-1/2')}>{description}</p>
+        <p
+          className={clsx(
+            descriptionClassName,
+            'font-robert text-left w-full lg:w-1/2',
+          )}
+        >
+          {description}
+        </p>
       </div>
       <div className="flex absolute items-center justify-center lg:justify-end py-5 right-0">
         <img
@@ -36,8 +43,10 @@ const BentoCard = ({
           )}
         />
       </div>
-      <div className='absolute bottom-7 left-5 pl-5'>
-        <button className='bg-white text-black rounded-md p-2 font-robert font-bold'><a href={href}>Live Demo</a></button>
+      <div className="absolute bottom-7 left-5 pl-5">
+        <button className="bg-white text-black rounded-md p-2 font-robert font-bold">
+          <a href={href}>Live Demo</a>
+        </button>
       </div>
     </div>
   );
@@ -76,7 +85,7 @@ export const BentoTilt = ({
       ref={itemRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={clsx(className,"transition-all duration-300")}
+      className={clsx(className, 'transition-all duration-300')}
       style={{ transform: transformStyle }}
     >
       {children}
