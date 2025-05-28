@@ -1,26 +1,35 @@
-import AnimatedTitle from './AnimatedTitle';
 import experience from '../data/exprience';
 import type { experienceProps } from '../types/exprience';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Expreince = () => {
+  const isInView = useRef(null);
   return (
     <section
       id="experience"
-      className="min-h-dvh w-screen bg-[#EDFF66] text-black overflow-hidden grid grid-cols-1 lg:grid-cols-2"
+      className="min-h-dvh w-screen px-5 bg-[#EDFF66] text-black overflow-hidden grid grid-cols-1 lg:grid-cols-2"
     >
       <div className="flex size-full flex-col justify-start items-center py-10 pb-24">
-        <div>
-          <div className="relative  size-full">
-            <AnimatedTitle
-              title="Experience <br/> Some of them"
-              className="font-zentry mt-5 pointer-events-none !text-black !p-0 !font-bold text-left  relative z-10"
-            />
-          </div>
+        <div className="relative  size-full flex items-center justify-start pl-5">
+          <motion.div
+            ref={isInView}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+            className="flex flex-col items-center justify-start gap-2 !text-7xl uppercase leading-[0.8]  sm:px-32 md:text-[6rem] font-zentry mt-5 pointer-events-none !text-black !p-0 !font-bold text-left  relative z-10"
+          >
+            Experience <br />
+            Some of them
+          </motion.div>
         </div>
         <div className="space-y-8 mt-4 px-4">
           {experience.map((item) => (

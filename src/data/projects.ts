@@ -3,7 +3,7 @@ const projects: projectProps[] = [
   {
     id: 1,
     name: 'Wavic',
-    href: 'wavic.pro',
+    href: 'https://www.wavic.pro/',
     image: 'images/projects/wavic.png',
     description:
       'Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.',
