@@ -49,7 +49,7 @@ const BentoCard = ({
         src={src}
         alt={title}
         className={clsx(
-          'flex  h-80 items-center justify-center lg:justify-end py-2 lg:py-5 right-0 w-full lg:w-1/2',
+          'flex  h-80 aspect-square items-center justify-center lg:justify-start py-2 lg:py-5 left-0 w-full lg:w-1/3',
         )}
       />
     </div>

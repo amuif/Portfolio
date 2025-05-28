@@ -3,38 +3,36 @@ import type { experienceProps } from '../types/exprience';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import AnimatedTitle from './AnimatedTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Expreince = () => {
-  const isInView = useRef(null);
   return (
     <section
       id="experience"
-      className="min-h-dvh w-screen px-5 bg-[#EDFF66] text-black overflow-hidden grid grid-cols-1 lg:grid-cols-2"
+      className="min-h-dvh w-full px-5 bg-[#EDFF66] text-black overflow-hidden "
     >
       <div className="flex size-full flex-col justify-start items-center py-10 pb-24">
-        <div className="relative  size-full flex items-center justify-start pl-5">
-          <motion.div
-            ref={isInView}
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-            className="flex flex-col items-center justify-start gap-2 !text-7xl uppercase leading-[0.8]  sm:px-32 md:text-[6rem] font-zentry mt-5 pointer-events-none !text-black !p-0 !font-bold text-left  relative z-10"
-          >
-            Experience <br />
-            Some of them
-          </motion.div>
+        <div className="relative  size-full flex flex-col pb-5 gap-4 items-center justify-center text-center col-span-2 pl-5">
+          <h3 className="text-sm uppercase md:text-base font-robert">
+            Experience
+          </h3>
+          <AnimatedTitle
+            title="Some of them"
+            className="flex  items-center justify-start gap-2 !text-7xl uppercase leading-[0.8]   md:text-[6rem] font-zentry mt-5 pointer-events-none !text-black !p-0 !font-bold text-left  relative z-10"
+          />
         </div>
-        <div className="space-y-8 mt-4 px-4">
-          {experience.map((item) => (
-            <ExperienceItem key={item.id} item={item} />
-          ))}
+        <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div>
+            {' '}
+            <div className="space-y-8 mt-4 px-4">
+              {experience.map((item) => (
+                <ExperienceItem key={item.id} item={item} />
+              ))}
+            </div>
+          </div>
+          <div className=""></div>
         </div>
       </div>
     </section>

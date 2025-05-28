@@ -23,8 +23,11 @@ const Hero = () => {
     });
   });
   return (
-    <div className=" min-h-screen relative px-10 " id="hero-section">
-      <div className="z-20 text-black px-5">
+    <div
+      className=" min-h-screen relative px-10 text-shadow-white"
+      id="hero-section"
+    >
+      <div className="z-20  px-5">
         <h6 className="top-32 left-5 uppercase flex flex-col  font-zentry font-black text-5xl sm:right-10 sm:text-7xl  absolute md:text-9xl lg:text-[12rem]">
           Ibrahim
           <span className="text-base font-robert ">
