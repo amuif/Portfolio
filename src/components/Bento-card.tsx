@@ -1,58 +1,40 @@
 import clsx from 'clsx';
 import { useRef, useState, type ReactNode } from 'react';
-
+import { Button } from './ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 type BentoCardProps = {
   src: string;
   title: string;
   description: string;
-  descriptionClassName?: string;
   href: string;
 };
 
-const BentoCard = ({
-  src,
-  title,
-  description,
-  descriptionClassName,
-  href,
-}: BentoCardProps) => {
+const BentoCard = ({ src, title, description, href }: BentoCardProps) => {
   return (
-    <div className="flex size-full flex-col gap-3 lg:flex-row items-center justify-between p-4">
-      <div className="z-10 size-full h-full w-full lg:w-1/2 flex flex-col justify-between p-3 text-white">
-        <div>
-          <h6 className="font-zentry uppercase  text-left w-full font-black text-xl  sm:text-3xl  md:text-5xl col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out">
-            {title}
-          </h6>
-          <p
-            className={clsx(
-              descriptionClassName,
-              'font-robert text-left w-full lg:w-1/2',
-            )}
-          >
-            {description}
-          </p>
+    <Card className="h-full w-full">
+      <CardContent className="flex flex-col lg:flex-row items-center justify-evenly h-full w-full">
+        <div className=" flex flex-col items-start justify-between h-full w-full lg:w-1/2">
+          <div>
+            <h4 className="uppercase font-bold text-2xl ">{title}</h4>
+            <p className="text-base w-full">{description}</p>
+          </div>
+          <div>
+            <Button>
+              <a href={href} target="_blank" rel="referer noopener">
+                Live Demo
+              </a>
+            </Button>
+          </div>
         </div>
-        <div className="bottom-7 mx-auto w-full flex items-center justify-center lg:justify-start lg:pl-5">
-          <button className="bg-white text-black rounded-md p-2 font-robert font-bold">
-            <a
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cursor-pointer"
-            >
-              Live Demo
-            </a>
-          </button>
+        <div className="p-5 h-full w-full lg:w-1/2 hidden lg:block">
+          <img
+            src={src}
+            alt={title}
+            className="h-full rounded-lg w-full object-contain object-center"
+          />
         </div>
-      </div>
-      <img
-        src={src}
-        alt={title}
-        className={clsx(
-          'flex  h-80 aspect-square items-center justify-center lg:justify-start py-2 lg:py-5 left-0 w-full lg:w-1/3',
-        )}
-      />
-    </div>
+      </CardContent>
+    </Card>
   );
 };
 

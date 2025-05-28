@@ -20,7 +20,7 @@ const projects: projectProps[] = [
     id: 3,
     name: 'Axion bot',
     href: '',
-    image: '/images/rome.jpg',
+    image: '/images/cairo.jpg',
     description:
       'Axion is an independent, intelligent AI chatbot designed to engage, assist, and converse like a human.',
   },

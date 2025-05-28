@@ -15,26 +15,25 @@ const Projects = () => {
             facilis odit explicabo officia hic suscipit, ducimus, natus dolorum
             ratione dolor possimus exercitationem mollitia!
           </p>
-          <BentoTilt className="border border-white/20 relative mb-7 h-[500px] w-full mx-auto  overflow-hidden rounded-md md:h-[55vh]">
-            <BentoCard
-              src={projects[0].image}
-              title={projects[0].name}
-              description={projects[0].description}
-              href={projects[0].href}
-            />
-          </BentoTilt>
+          <div className="flex flex-col px-1 gap-7">
+            <BentoTilt className="border border-white/20  mb-7 h-[300px] w-full mx-auto  !rounded-md md:h-[55vh]">
+              <BentoCard
+                src={projects[0].image}
+                title={projects[0].name}
+                description={projects[0].description}
+                href={projects[0].href}
+              />
+            </BentoTilt>
 
-          <div className="grid h-[120vh] md:h-[135vh] w-full gap-7">
-            <BentoTilt className="relative border border-white/20  overflow-hidden rounded-md transition-transform duration-300 ease-out   md:col-span0 md:ms-0">
+            <BentoTilt className="border border-white/20  mb-7 h-[300px] w-full mx-auto  overflow-hidden rounded-md md:h-[55vh]">
               <BentoCard
                 src={projects[1].image}
                 title={projects[1].name}
                 description={projects[1].description}
-                descriptionClassName="w-1/2 pr-1 text-sm py-2"
                 href={projects[1].href}
               />
             </BentoTilt>
-            <BentoTilt className="relative border border-white/20  col-span-2 overflow-hidden rounded-md transition-transform duration-300 ease-out me-14 md:col-span-1 md:me-0">
+            <BentoTilt className="border border-white/20   mb-7 h-[300px] w-full mx-auto  overflow-hidden rounded-md md:h-[55vh]">
               <BentoCard
                 src={projects[2].image}
                 title={projects[2].name}

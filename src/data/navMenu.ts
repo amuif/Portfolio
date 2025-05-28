@@ -4,7 +4,7 @@ export const navMenu: linkProps[] = [
   {
     id: 1,
     name: 'Home',
-    href: '/',
+    href: '#',
   },
   {
     id: 2,
