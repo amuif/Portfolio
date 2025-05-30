@@ -3,21 +3,20 @@ import Expreince from './components/Expreince';
 import Projects from './components/Projects';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Tools from './components/Tools';
+import { ThemeProvider } from './components/Theme-Provider';
 function App() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <NavBar />
       <Hero />
       <About />
       <Projects />
       <Expreince />
       <Tools />
-      <Contact />
       <Footer />
-    </main>
+    </ThemeProvider>
   );
 }
 

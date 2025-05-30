@@ -4,12 +4,14 @@ import projects from '../data/projects';
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-black pb-24">
+    <section id="projects" className=" pb-24">
       <div className="container mx-auto px-3 md:px-10">
         <div className="px-5 py-32 w-full lg:w-[95%] mx-auto">
-          <p className="text-lg text-blue-50 max-w-md">Projects</p>
+          <p className="text-lg text-black dark:text-white max-w-md">
+            Projects
+          </p>
 
-          <p className="text-blue-50 opacity-50 text-lg max-w-md pb-5 ">
+          <p className="text-black dark:text-blue-50 opacity-50 text-lg max-w-md pb-5 ">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
             magni doloremque voluptatem similique molestiae dolore veritatis
             facilis odit explicabo officia hic suscipit, ducimus, natus dolorum

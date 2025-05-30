@@ -25,12 +25,12 @@ const About = () => {
   return (
     <div id="projects" className="min-h-screen  w-s overflow-hidden">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
-        <h2 className="text-sm uppercase md:text-base text-white font-robert">
+        <h2 className="text-sm uppercase md:text-base text-black dark:text-white font-robert">
           Projects
         </h2>
         <AnimatedTitle
           title="Discover some of my <br/> earlier projects"
-          className="mt-5 !text-white text-center font-zentry"
+          className="mt-5  text-center font-zentry"
         />
       </div>
       <div id="clip" className="h-dvh w-screen">
