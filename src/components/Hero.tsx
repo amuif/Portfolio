@@ -2,6 +2,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { TextAnimate } from './magicui/text-animate';
+import { Meteors } from './magicui/meteors';
 
 gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
@@ -24,7 +25,10 @@ const Hero = () => {
     });
   });
   return (
-    <div className=" min-h-screen px-10 text-shadow-white" id="hero">
+    <div className=" min-h-screen px-10 " id="hero">
+      <div className="relative overflow-hidden h-[600px] w-full max-w-full">
+        <Meteors />
+      </div>
       <h6 className="top-32 left-5 uppercase flex flex-col  font-zentry font-black text-5xl sm:right-10 sm:text-7xl  absolute md:text-9xl lg:text-[12rem]">
         <TextAnimate animation="slideUp" by="word" once>
           Ibrahim

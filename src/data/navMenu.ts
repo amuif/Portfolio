@@ -18,7 +18,7 @@ export const navMenu: linkProps[] = [
   },
   {
     id: 4,
-    name: 'Contact',
-    href: '#contact',
+    name: 'Skills',
+    href: '#skills',
   },
 ];

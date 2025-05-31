@@ -4,7 +4,7 @@ import Projects from './components/Projects';
 import Hero from './components/Hero';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Tools from './components/Tools';
+import Tools from './components/Skills';
 import { ThemeProvider } from './components/Theme-Provider';
 import { DockNav } from './components/DockNav';
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      <Expreince />
       <Tools />
+      <Expreince />
       <Footer />
     </ThemeProvider>
   );

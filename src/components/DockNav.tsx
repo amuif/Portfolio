@@ -63,22 +63,22 @@ const DATA = {
     social: {
       GitHub: {
         name: 'GitHub',
-        url: '#',
+        url: 'https://github.com/amuif',
         icon: Icons.github,
       },
       LinkedIn: {
         name: 'LinkedIn',
-        url: '#',
+        url: 'https://www.linkedin.com/in/ibrahim-hassen',
         icon: Icons.linkedin,
       },
       X: {
         name: 'X',
-        url: '#',
+        url: 'https://x.com/Amuif1',
         icon: Icons.x,
       },
-      email: {
-        name: 'Send Email',
-        url: '#',
+      Email: {
+        name: 'Email',
+        url: 'amudiworks@gmail.com',
         icon: Icons.email,
       },
     },
@@ -87,7 +87,7 @@ const DATA = {
 
 export function DockNav() {
   return (
-    <div className="fixed top-1/2 right-4 -translate-y-1/2 z-50 flex  items-end">
+    <div className="fixed hidden lg:block top-1/2 right-4 -translate-y-1/2 z-50 items-end">
       <TooltipProvider>
         <Dock iconMagnification={50} iconDistance={20} direction="bottom">
           {Object.entries(DATA.contact.social).map(([name, social]) => (
@@ -97,6 +97,8 @@ export function DockNav() {
                   <Link
                     to={social.url}
                     aria-label={social.name}
+                    target="_blank"
+                    rel="noopener noreferer"
                     className={cn(
                       buttonVariants({ variant: 'ghost', size: 'icon' }),
                       'size-12 rounded-full',

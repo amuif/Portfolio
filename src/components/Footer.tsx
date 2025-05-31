@@ -3,20 +3,25 @@ import { navMenu } from '../data/navMenu';
 
 const Footer = () => {
   return (
-    <div className="min-w-screen py-5 text-white bg-black font-robert">
-      <hr className="text-white w-full lg:w-[90%] mx-auto py-5" />
+    <div className="min-w-screen py-5  ">
+      <hr className=" w-full lg:w-[90%] mx-auto py-5" />
       <div className="flex flex-row justify-between items-center w-full lg:w-[60%] mx-auto">
-        <div>
-          <h1 className="font-zentry font-bold text-2xl lg:text-4xl">
+        <div className="hidden lg:block">
+          <h1 className="font-zentry whitespace-nowrap font-bold text-2xl lg:text-4xl">
             Lets talk.
           </h1>
         </div>
-        <div className="flex flex-row gap-5 lg:gap-24">
+        <div className="flex flex-row gap-5 lg:gap-24 w-full items-center justify-evenly">
           <div className="flex flex-col">
             <h4 className="font-zentry font-bold pb-3">My Socials</h4>
             <div className="flex flex-col gap-3">
               {socialMenu.map((social) => (
-                <a href="" key={social.id}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferer"
+                  href={social.href}
+                  key={social.id}
+                >
                   {' '}
                   {social.name}
                 </a>

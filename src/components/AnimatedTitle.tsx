@@ -29,7 +29,6 @@ const AnimatedTitle = ({ title, className }: AnimatedTitleProps) => {
           end: 'top 20%',
           scrub: true,
           toggleActions: 'play none none reverse',
-          markers: true,
         },
       });
 

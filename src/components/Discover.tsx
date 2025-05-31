@@ -23,7 +23,7 @@ const About = () => {
     });
   });
   return (
-    <div id="projects" className="min-h-screen  w-s overflow-hidden">
+    <div id="projects" className="min-h-screen overflow-hidden">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <h2 className="text-sm uppercase md:text-base text-black dark:text-white font-robert">
           Projects

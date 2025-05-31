@@ -2,22 +2,22 @@ import type { linkProps } from '../types/links';
 export const socialMenu: linkProps[] = [
   {
     id: 1,
-    name: 'LinkedIn',
-    href: '',
+    name: 'Github',
+    href: 'https://github.com/amuif',
   },
   {
     id: 2,
-    name: 'Github',
-    href: '',
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/ibrahim-hassen',
   },
   {
     id: 3,
     name: 'X',
-    href: '',
+    href: 'https://x.com/Amuif1',
   },
   {
     id: 4,
     name: 'Telegram',
-    href: '',
+    href: 'https://t.me/amuif',
   },
 ];
