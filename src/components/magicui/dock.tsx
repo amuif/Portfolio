@@ -1,5 +1,3 @@
-'use client';
-
 import { cva, type VariantProps } from 'class-variance-authority';
 import {
   motion,
@@ -27,7 +25,7 @@ const DEFAULT_MAGNIFICATION = 60;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max items-center justify-center gap-2 rounded-2xl border p-2 backdrop-blur-md',
+  'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10  mt-12 flex h-[58px] w-max items-center justify-end gap-2 rounded-2xl p-2 backdrop-blur-md flex-col ',
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -64,19 +62,21 @@ const Dock = React.forwardRef<HTMLDivElement, DockProps>(
     };
 
     return (
-      <motion.div
-        ref={ref}
-        onMouseMove={(e) => mouseX.set(e.pageX)}
-        onMouseLeave={() => mouseX.set(Infinity)}
-        {...props}
-        className={cn(dockVariants({ className }), {
-          'items-start': direction === 'top',
-          'items-center': direction === 'middle',
-          'items-end': direction === 'bottom',
-        })}
-      >
-        {renderChildren()}
-      </motion.div>
+      <div className="flex min-h-screen w-fit items-center justify-center z-50 ">
+        <motion.div
+          ref={ref}
+          onMouseMove={(e) => mouseX.set(e.pageX)}
+          onMouseLeave={() => mouseX.set(Infinity)}
+          {...props}
+          className={cn(dockVariants({ className }), {
+            'items-start': direction === 'top',
+            'items-center': direction === 'middle',
+            'items-end': direction === 'bottom',
+          })}
+        >
+          {renderChildren()}
+        </motion.div>
+      </div>
     );
   },
 );

@@ -16,7 +16,7 @@ const Hero = () => {
       borderRadius: '0 0 0 0',
       ease: 'power1.inOut',
       scrollTrigger: {
-        trigger: '#hero-section',
+        trigger: '#hero',
         start: 'center center',
         end: 'bottom center',
         scrub: true,
@@ -29,15 +29,14 @@ const Hero = () => {
         <TextAnimate animation="slideUp" by="word" once>
           Ibrahim
         </TextAnimate>
-        <span className="text-base font-robert flex flex-col gap-1">
+        <div className="text-base font-robert flex flex-col gap-1">
           <TextAnimate animation="slideUp" by="word" once>
             Full-stack dev. Turning ideas into
           </TextAnimate>{' '}
-          <br />
           <TextAnimate animation="slideUp" by="word" once>
             interactive web magic 🚀
           </TextAnimate>
-        </span>
+        </div>
       </h6>
       <h6 className="bottom-5 uppercase font-zentry font-black text-5xl right-8 sm:right-10 sm:text-7xl md:text-9xl absolute lg:text-[12rem]">
         <TextAnimate animation="slideUp" by="word" once>
