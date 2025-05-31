@@ -7,8 +7,8 @@ const NavBar = () => {
   const isMobile = useMediaQuery({ query: '(max-width:1024px)' });
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex w-full items-center justify-center mx-auto pt-5 fixed ">
-      <nav className="w-fit shadow-md  rounded-3xl backdrop-blur-md text-black z-[100] dark:text-white   p-5 flex flex-row mx-auto items-center justify-center gap-5 ">
+    <div className="flex w-full items-center justify-center mx-auto pt-5 fixed z-[9999] ">
+      <nav className="w-fit shadow-md  rounded-3xl backdrop-blur-md bg-white/20 dark:bg-black/20 text-black  dark:text-white   p-3 flex flex-row mx-auto items-center justify-center gap-5 ">
         {isMobile ? (
           <div className="">
             <div className="flex flex-col gap-3">
