@@ -1,5 +1,5 @@
 # Monochrome Portfolio 
-*A clean, minimalist portfolio inspired by zentry.com*.Feel free to star the repo if you find it usefull and it's for everyone to use.
+*A clean, minimalist portfolio inspired by zentry.com*. Feel free to star the repo if you find it usefull and it's for everyone to use.
 
 ## Features
 - 🖤 Pure monochrome aesthetic
