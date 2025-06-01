@@ -78,7 +78,7 @@ const DATA = {
       },
       Email: {
         name: 'Email',
-        url: 'amudiworks@gmail.com',
+        url: '',
         icon: Icons.email,
       },
     },
