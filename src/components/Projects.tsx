@@ -12,10 +12,10 @@ const Projects = () => {
           </p>
 
           <p className="text-black dark:text-blue-50 opacity-50 text-lg max-w-md pb-5 ">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-            magni doloremque voluptatem similique molestiae dolore veritatis
-            facilis odit explicabo officia hic suscipit, ducimus, natus dolorum
-            ratione dolor possimus exercitationem mollitia!
+            I build solutions that balance creativity and functionality. Each
+            project here represents a challenge tackled, a skill honed, and a
+            problem solved—whether through clean design, efficient code, or
+            user-focused thinking. Explore my work below.
           </p>
           <div className="flex flex-col px-1 gap-7">
             <BentoTilt className="border border-white/20  mb-7 h-[300px] w-full mx-auto  !rounded-md lg:h-[55vh]">

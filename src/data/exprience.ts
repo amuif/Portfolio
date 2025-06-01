@@ -4,25 +4,25 @@ const experience: experienceProps[] = [
     id: 1,
     name: 'Wavic',
     duration: '2024 - Present',
-    role: 'Leading Software enginner',
+    role: 'Software Lead',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, dicta? Eligendi id saepe totam natus quos quam nostrum, quia obcaecati, ex, placeat at eveniet aspernatur voluptas necessitatibus provident odit fuga?',
+      "As the Software Lead at Wavic, I spearheaded the development of the startup's MVP, overseeing end-to-end execution. My responsibilities included designing intuitive UI/UX, integrating scalable APIs, and ensuring a fully responsive front-end—delivering a functional and user-centric product within tight deadlines.",
   },
   {
     id: 2,
     name: '4K Labs',
     duration: '2023 - Present',
-    role: 'Leading Frontend enginner',
+    role: 'Software Engineer',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, dicta? Eligendi id saepe totam natus quos quam nostrum, quia obcaecati, ex, placeat at eveniet aspernatur voluptas necessitatibus provident odit fuga?',
+      'Developed web applications and projects using Raspberry Pi, blending front-end design with IoT solutions to create interactive experiences.',
   },
   {
     id: 3,
     name: 'Bits Fusion',
     duration: '2023 - 2024',
-    role: 'Leading Frontend enginner',
+    role: 'Frontend Engineer',
     description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, dicta? Eligendi id saepe totam natus quos quam nostrum, quia obcaecati, ex, placeat at eveniet aspernatur voluptas necessitatibus provident odit fuga?',
+      'Designed and developed performant, user-centric websites for local clients, translating business requirements into responsive interfaces that improved customer engagement and satisfaction.',
   },
 ];
 export default experience;

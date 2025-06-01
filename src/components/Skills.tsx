@@ -1,5 +1,6 @@
 import { frameworksAndLibraries, languages } from '@/data/skills';
 import AnimatedTitle from './AnimatedTitle';
+import { TextAnimate } from './magicui/text-animate';
 
 const Tools = () => {
   return (
@@ -8,7 +9,9 @@ const Tools = () => {
       className="min-h-svh w-full lg:w-[80%] items-center justify-center mx-auto flex flex-col gap-7 py-10"
     >
       <div className="text-center w-full flex items-center justify-center flex-col gap-4">
-        <h3 className="text-sm uppercase md:text-base font-robert ">Skills</h3>
+        <TextAnimate className="text-sm uppercase md:text-base font-robert ">
+          Skills
+        </TextAnimate>
         <AnimatedTitle
           title="I mostly work with"
           className=" mt-5  text-center font-zentry"

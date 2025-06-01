@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { motion } from 'framer-motion';
 import AnimatedTitle from './AnimatedTitle';
+import { TextAnimate } from './magicui/text-animate';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,9 +13,9 @@ const Expreince = () => {
     <section id="experience" className="min-h-dvh w-full px-5 overflow-hidden ">
       <div className="flex size-full flex-col justify-start items-center py-10 pb-24">
         <div className="relative  size-full flex flex-col pb-5 gap-4 items-center justify-center text-center col-span-2 pl-5">
-          <h3 className="text-sm uppercase md:text-base font-robert">
+          <TextAnimate className="text-sm uppercase md:text-base font-robert">
             Experience
-          </h3>
+          </TextAnimate>
           <AnimatedTitle
             title="Some of them"
             className="flex  items-center justify-start gap-2 !text-7xl uppercase leading-[0.8]   md:text-[6rem] font-zentry mt-5 pointer-events-none  !p-0 !font-bold text-left  relative z-10"

@@ -30,7 +30,7 @@ const BentoCard = ({ src, title, description, href }: BentoCardProps) => {
           <img
             src={src}
             alt={title}
-            className="h-full rounded-lg w-full object-contain object-center"
+            className="h-full text-black dark:text-white fill-white rounded-lg w-full object-contain object-center"
           />
         </div>
       </CardContent>
@@ -71,7 +71,7 @@ export const BentoTilt = ({
       ref={itemRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={clsx(className, 'transition-all duration-300')}
+      className={clsx(className, 'tn-300')}
       style={{ transform: transformStyle }}
     >
       {children}
