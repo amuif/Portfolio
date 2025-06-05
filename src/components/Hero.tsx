@@ -25,22 +25,22 @@ const Hero = () => {
     });
   });
   return (
-    <div className=" min-h-screen px-10 " id="hero">
+    <div className=" min-h-screen px-5 lg:px-10 " id="hero">
       <div className="relative overflow-hidden h-[600px] w-full max-w-full">
         <Meteors />
       </div>
-      <h6 className="top-1/4 right-1/12 uppercase flex flex-col  font-zentry font-black text-5xl  sm:text-7xl  absolute md:text-9xl lg:text-[12rem]  ">
-        <div className="flex gap-6 top-1/3 right-1/2">
+      <h6 className="top-1/3 lg:top-1/4  lg:right-1/12 uppercase flex flex-col  font-zentry font-black text-5xl  sm:text-7xl  absolute md:text-9xl lg:text-[12rem]  ">
+        <div className="gap-6  flex items-center py-6 justify-center">
           <TextAnimate animation="slideUp" by="line" once>
             Ibrahim
           </TextAnimate>
-          <TextAnimate animation="slideDown" by="word" once>
+          <TextAnimate animation="slideDown" by="line" once>
             Hassen
           </TextAnimate>
         </div>
-        <div className="text-base font-robert flex flex-col gap-1 text-center">
+        <div className="text-base items-center justify-center font-robert flex flex-col gap-1 text-center">
           <TextAnimate
-            className="text-lg font-bold"
+            className="text-base font-bold  text-pretty text-center"
             animation="slideUp"
             by="word"
             once
@@ -52,7 +52,7 @@ const Hero = () => {
             animation="slideUp"
             by="word"
             once
-            className="font-light text-base"
+            className="font-light text-center px-5 text-base"
           >
             Turning ideas into interactive web magic
           </TextAnimate>

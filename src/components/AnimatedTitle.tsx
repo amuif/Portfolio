@@ -49,7 +49,7 @@ const AnimatedTitle = ({ title, className }: AnimatedTitleProps) => {
     <div
       ref={containerRef}
       className={clsx(
-        'flex flex-col gap-1 !text-7xl uppercase leading-[0.8] text-black  dark:text-white sm:px-32 md:text-[6rem]',
+        'flex flex-col gap-1 text-5xl uppercase leading-[0.8] text-black  dark:text-white sm:px-32 md:text-[6rem] font-zentry',
         className,
       )}
     >

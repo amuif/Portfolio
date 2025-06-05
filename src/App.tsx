@@ -14,8 +14,8 @@ function App() {
       <Hero />
       {/* <About />*/}
       <Projects />
-      <Tools />
       <Expreince />
+      <Tools />
       <Footer />
     </ThemeProvider>
   );

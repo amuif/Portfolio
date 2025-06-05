@@ -12,13 +12,13 @@ const Expreince = () => {
   return (
     <section id="experience" className="min-h-dvh w-full px-5 overflow-hidden ">
       <div className="flex size-full flex-col justify-start items-center py-10 pb-24">
-        <div className="relative  size-full flex flex-col pb-5 gap-4 items-center justify-center text-center col-span-2 pl-5">
-          <TextAnimate className="text-sm uppercase md:text-base font-robert">
+        <div className="relative  size-full flex flex-col pb-5 gap-4 items-center justify-center text-center  pl-5">
+          <TextAnimate className="text-sm uppercase md:text-base">
             Experience
           </TextAnimate>
           <AnimatedTitle
-            title="Some of them"
-            className="flex  items-center justify-start gap-2 !text-7xl uppercase leading-[0.8]   md:text-[6rem] font-zentry mt-5 pointer-events-none  !p-0 !font-bold text-left  relative z-10"
+            title="The journey so far"
+            className="mt-5 font-bold text-center "
           />
         </div>
         <div className="flex w-full lg:w-[80%]">

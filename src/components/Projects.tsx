@@ -8,8 +8,8 @@ const Projects = () => {
   return (
     <section id="projects" className="">
       <div className="container mx-auto px-3 md:px-10">
-        <div className="px-5 py-32 w-full lg:w-[95%] mx-auto">
-          <div className="flex flex-col gap-5 pb-6 lg:pb-12 items-center justify-center text-center">
+        <div className="px-5 py-10 lg:py-32 w-full lg:w-[95%] mx-auto">
+          <div className="flex flex-col gap-5 pb-5 lg:pb-12 items-center justify-center text-center">
             <TextAnimate className="text-sm uppercase  md:text-base text-black dark:text-white font-robert">
               Projects
             </TextAnimate>
