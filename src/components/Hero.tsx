@@ -29,24 +29,36 @@ const Hero = () => {
       <div className="relative overflow-hidden h-[600px] w-full max-w-full">
         <Meteors />
       </div>
-      <h6 className="top-32 left-5 uppercase flex flex-col  font-zentry font-black text-5xl sm:right-10 sm:text-7xl  absolute md:text-9xl lg:text-[12rem]">
-        <TextAnimate animation="slideUp" by="word" once>
-          Ibrahim
-        </TextAnimate>
-        <div className="text-base font-robert flex flex-col gap-1">
-          <TextAnimate animation="slideUp" by="word" once>
-            Full-stack dev. Turning ideas into
+      <h6 className="top-1/4 right-1/12 uppercase flex flex-col  font-zentry font-black text-5xl  sm:text-7xl  absolute md:text-9xl lg:text-[12rem]  ">
+        <div className="flex gap-6 top-1/3 right-1/2">
+          <TextAnimate animation="slideUp" by="line" once>
+            Ibrahim
+          </TextAnimate>
+          <TextAnimate animation="slideDown" by="word" once>
+            Hassen
+          </TextAnimate>
+        </div>
+        <div className="text-base font-robert flex flex-col gap-1 text-center">
+          <TextAnimate
+            className="text-lg font-bold"
+            animation="slideUp"
+            by="word"
+            once
+          >
+            🚀 Full-Stack Developer · 🎨 Frontend Specialist · 🧠 UI/UX
+            Enthusiast
           </TextAnimate>{' '}
-          <TextAnimate animation="slideUp" by="word" once>
-            interactive web magic 🚀
+          <TextAnimate
+            animation="slideUp"
+            by="word"
+            once
+            className="font-light text-base"
+          >
+            Turning ideas into interactive web magic
           </TextAnimate>
         </div>
       </h6>
-      <h6 className="bottom-5 uppercase font-zentry font-black text-5xl right-8 sm:right-10 sm:text-7xl md:text-9xl absolute lg:text-[12rem]">
-        <TextAnimate animation="slideUp" by="word" once>
-          Hassen
-        </TextAnimate>
-      </h6>
+      <h6 className="bottom-5 uppercase font-zentry font-black text-5xl right-8 sm:right-10 sm:text-7xl md:text-9xl absolute lg:text-[12rem]"></h6>
     </div>
   );
 };

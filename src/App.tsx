@@ -1,4 +1,3 @@
-import About from './components/Discover';
 import Expreince from './components/Expreince';
 import Projects from './components/Projects';
 import Hero from './components/Hero';
@@ -13,7 +12,7 @@ function App() {
       <NavBar />
       <DockNav />
       <Hero />
-      <About />
+      {/* <About />*/}
       <Projects />
       <Tools />
       <Expreince />
