@@ -2,14 +2,17 @@ import clsx from 'clsx';
 import { useRef, useState, type ReactNode } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useTheme } from './Theme-Provider';
 type BentoCardProps = {
   src: string;
   title: string;
   description: string;
   href: string;
+  darkImage?:string
 };
 
-const BentoCard = ({ src, title, description, href }: BentoCardProps) => {
+const BentoCard = ({ darkImage,src, title, description, href }: BentoCardProps) => {
+  const {theme} = useTheme()
   return (
     <Card className="h-full w-full">
       <CardContent className="flex flex-col lg:flex-row items-center justify-evenly h-full w-full">
@@ -28,7 +31,7 @@ const BentoCard = ({ src, title, description, href }: BentoCardProps) => {
         </div>
         <div className="p-5 h-full w-full lg:w-1/2 hidden lg:block">
           <img
-            src={src}
+            src={theme === 'light' && darkImage ? darkImage : src}
             alt={title}
             className="h-full text-black dark:text-white fill-white rounded-lg w-full object-contain object-center"
           />

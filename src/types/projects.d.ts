@@ -3,5 +3,6 @@ export type projectProps = {
   name: string;
   href: string;
   image: string;
+  darkImage?: string;
   description: string;
 };

@@ -46,6 +46,7 @@ const Projects = () => {
             <BentoTilt className="border border-white/20   mb-7 h-[300px] w-full mx-auto  overflow-hidden rounded-md lg:h-[55vh]">
               <BentoCard
                 src={projects[2].image}
+                darkImage={projects[2].darkImage}
                 title={projects[2].name}
                 description={projects[2].description}
                 href={projects[2].href}
