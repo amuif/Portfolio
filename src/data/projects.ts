@@ -16,14 +16,13 @@ const projects: projectProps[] = [
   //   description:
   //     'TourNest is a comprehensive travel booking platform designed to simplify the travel planning experience for both customers and administrators.',
   // },
-  // {
-  //   id: 3,
-  //   name: 'Axon bot',
-  //   href: '',
-  //   //href: 'https://gym-7olg.vercel.app/',
-  //   image: '/images/chatbot.png',
-  //   description:
-  //     'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
-  // },
+  {
+    id: 3,
+    name: 'Axon bot',
+    href: 'https://gym-7olg.vercel.app/',
+    image: '/images/chatbot.png',
+    description:
+      'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
+  },
 ];
 export default projects;
