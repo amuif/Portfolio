@@ -8,11 +8,17 @@ type BentoCardProps = {
   title: string;
   description: string;
   href: string;
-  darkImage?:string
+  darkImage?: string;
 };
 
-const BentoCard = ({ darkImage,src, title, description, href }: BentoCardProps) => {
-  const {theme} = useTheme()
+const BentoCard = ({
+  darkImage,
+  src,
+  title,
+  description,
+  href,
+}: BentoCardProps) => {
+  const { theme } = useTheme();
   return (
     <Card className="h-full w-full">
       <CardContent className="flex flex-col lg:flex-row items-center justify-evenly h-full w-full">

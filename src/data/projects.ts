@@ -8,7 +8,7 @@ const projects: projectProps[] = [
     description:
       'Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.',
   },
- {
+  {
     id: 2,
     name: 'Axon bot',
     href: 'https://gym-7olg.vercel.app/',
@@ -16,16 +16,13 @@ const projects: projectProps[] = [
     description:
       'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
   },
- {
+  {
     id: 3,
     name: 'And many  more ',
     href: 'https://github.com/amuif?tab=repositories',
     image: '/images/GitHub_Light.png',
-    darkImage:'/images/GitHub_Dark.png',
-    description:
-      'Discover more projects of mine on github.',
+    darkImage: '/images/GitHub_Dark.png',
+    description: 'Discover more projects of mine on github.',
   },
-
-
 ];
 export default projects;
