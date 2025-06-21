@@ -8,14 +8,14 @@ const projects: projectProps[] = [
     description:
       'Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.',
   },
-  {
-    id: 2,
-    name: 'Axon bot',
-    href: 'https://gym-7olg.vercel.app/',
-    image: '/images/chatbot.png',
-    description:
-      'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
-  },
+  // {
+  //   id: 2,
+  //   name: 'Axon bot',
+  //   href: 'https://gym-7olg.vercel.app/',
+  //   image: '/images/chatbot.png',
+  //   description:
+  //     'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
+  // },
   {
     id: 3,
     name: 'And many  more ',
