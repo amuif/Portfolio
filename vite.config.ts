@@ -7,12 +7,12 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-  //   visualizer({
-  //     open: true,
-  //     gzipSize: true,
-  //     brotliSize: true,
-  //     filename: 'stats.html',
-  //   }),
+    //   visualizer({
+    //     open: true,
+    //     gzipSize: true,
+    //     brotliSize: true,
+    //     filename: 'stats.html',
+    //   }),
   ],
   resolve: {
     alias: {
