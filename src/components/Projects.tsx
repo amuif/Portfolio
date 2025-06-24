@@ -34,8 +34,7 @@ const Projects = () => {
                 href={projects[0].href}
               />
             </BentoTilt>
-            {/*
-         <BentoTilt className="border border-white/20  mb-7 h-[300px] w-full mx-auto  overflow-hidden rounded-md lg:h-[55vh]">
+            <BentoTilt className="border border-white/20  mb-7 h-[300px] w-full mx-auto  overflow-hidden rounded-md lg:h-[55vh]">
               <BentoCard
                 src={projects[1].image}
                 title={projects[1].name}
@@ -43,8 +42,7 @@ const Projects = () => {
                 href={projects[1].href}
               />
             </BentoTilt>
-         
-              */}{' '}
+
             <BentoTilt className="border border-white/20   mb-7 h-[300px] w-full mx-auto  overflow-hidden rounded-md lg:h-[55vh]">
               <BentoCard
                 src={projects[1].image}

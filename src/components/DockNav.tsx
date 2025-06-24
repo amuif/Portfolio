@@ -1,8 +1,7 @@
 import { CalendarIcon, MailIcon } from 'lucide-react';
 import React from 'react';
-import { Link } from 'react-router';
 import { ModeToggle } from '@/components/Mode-Toggle';
-import { buttonVariants } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
@@ -11,6 +10,7 @@ import {
 } from '@/components/ui/tooltip';
 import { cn } from '@/lib/utils';
 import { Dock, DockIcon } from '@/components/magicui/dock';
+import { toast } from 'sonner';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -76,16 +76,20 @@ const DATA = {
         url: 'https://x.com/Amuif1',
         icon: Icons.x,
       },
-      Email: {
-        name: 'Email',
-        url: '',
-        icon: Icons.email,
-      },
+      // Email: {
+      // name: 'Email',
+      // url: 'mailto:amudiworks@gmail.com',
+      // icon: Icons.email,
+      // },
     },
   },
 };
 
 export function DockNav() {
+  const handleCopy = () => {
+    navigator.clipboard.writeText('amudiworks@gmail.com');
+    toast.success('Email copied!');
+  };
   return (
     <div className="fixed hidden lg:block top-1/2 right-4 -translate-y-1/2 z-50 items-end">
       <TooltipProvider>
@@ -94,18 +98,22 @@ export function DockNav() {
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Link
-                    to={social.url}
+                  <a
+                    href={social.url}
                     aria-label={social.name}
-                    target="_blank"
-                    rel="noopener noreferer"
+                    target={social.name === 'Email' ? undefined : '_blank'}
+                    rel={
+                      social.name === 'Email'
+                        ? undefined
+                        : 'noopener noreferrer'
+                    }
                     className={cn(
                       buttonVariants({ variant: 'ghost', size: 'icon' }),
                       'size-12 rounded-full',
                     )}
                   >
                     <social.icon className="size-4" />
-                  </Link>
+                  </a>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{name}</p>
@@ -113,6 +121,26 @@ export function DockNav() {
               </Tooltip>
             </DockIcon>
           ))}
+          <DockIcon>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="ghost"
+                  onClick={handleCopy}
+                  className={cn(
+                    buttonVariants({ variant: 'ghost', size: 'icon' }),
+                    'size-12 rounded-full',
+                  )}
+                >
+                  <Icons.email className="size-4" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Email</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
