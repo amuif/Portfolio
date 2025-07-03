@@ -8,8 +8,17 @@ const projects: projectProps[] = [
     description:
       'Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.',
   },
-  {
+    {
     id: 2,
+    name: 'Clarity',
+    href: 'https://clarityfinance.netlify.app/',
+    image: '/images/clarity.svg',
+    description:
+      'Take charge of your financial future with crystal-clear control over your finances. Simplify budgeting and track spending with AI-powered insights.',
+  },
+
+  {
+    id: 3,
     name: 'Axon bot',
     href: 'https://gym-7olg.vercel.app/',
     image: '/images/chatbot.png',
