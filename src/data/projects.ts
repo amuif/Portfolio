@@ -4,11 +4,11 @@ const projects: projectProps[] = [
     id: 1,
     name: 'Wavic',
     href: 'https://www.wavic.pro/',
-    image: 'images/projects/wavic.png',
+    image: 'images/wavic.webp',
     description:
       'Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.',
   },
-    {
+  {
     id: 2,
     name: 'Clarity',
     href: 'https://clarityfinance.netlify.app/',
@@ -21,7 +21,7 @@ const projects: projectProps[] = [
     id: 3,
     name: 'Axon bot',
     href: 'https://gym-7olg.vercel.app/',
-    image: '/images/chatbot.png',
+    image: '/images/chatbot.webp',
     description:
       'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
   },
@@ -29,8 +29,8 @@ const projects: projectProps[] = [
     id: 3,
     name: 'And many  more ',
     href: 'https://github.com/amuif?tab=repositories',
-    image: '/images/GitHub_Light.png',
-    darkImage: '/images/GitHub_Dark.png',
+    image: '/images/GitHub_Light.webp',
+    darkImage: '/images/GitHub_Dark.webp',
     description: 'Discover more projects of mine on github.',
   },
 ];
