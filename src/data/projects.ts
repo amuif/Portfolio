@@ -17,14 +17,14 @@ const projects: projectProps[] = [
       'Take charge of your financial future with crystal-clear control over your finances. Simplify budgeting and track spending with AI-powered insights.',
   },
 
-  {
-    id: 3,
-    name: 'Axon bot',
-    href: 'https://gym-7olg.vercel.app/',
-    image: '/images/chatbot.webp',
-    description:
-      'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
-  },
+  // {
+  //   id: 3,
+  //   name: 'Axon bot',
+  //   href: 'https://axonchatbot.vercel.app/',
+  //   image: '/images/chatbot.webp',
+  //   description:
+  //     'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
+  // },
   {
     id: 3,
     name: 'And many  more ',
