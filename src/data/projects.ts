@@ -11,7 +11,7 @@ const projects: projectProps[] = [
   {
     id: 2,
     name: 'Clarity',
-    href: 'https://clarityfinance.netlify.app/',
+    href: 'https://clarity-financee.vercel.app/',
     image: '/images/clarity.svg',
     description:
       'Take charge of your financial future with crystal-clear control over your finances. Simplify budgeting and track spending with AI-powered insights.',
