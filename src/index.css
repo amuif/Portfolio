@@ -25,7 +25,7 @@
   --font-robert: robert;
 }
 
-.root {
+:root {
   font-family: robert, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -209,12 +209,11 @@ button {
     @apply bg-background text-foreground;
     color: var(--foreground);
     background-color: var(--background);
-    min-width: 320px;
-    min-height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-    display: flex;
-    place-items: center;
   }
+}
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

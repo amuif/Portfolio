@@ -8,17 +8,18 @@ import { ThemeProvider } from './components/Theme-Provider';
 import { DockNav } from './components/DockNav';
 import { useIsMobile } from './hooks/isMobile';
 function App() {
-  const isMobile = useIsMobile()
+  const isMobile = useIsMobile();
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <NavBar />
-      {!isMobile && <DockNav/>}
-
-      <Hero />
-      <Projects />
-      <Expreince />
-      <Tools />
-      <Footer />
+      <div>
+        {!isMobile && <DockNav />}
+        <Hero />
+        <Projects />
+        <Expreince />
+        <Tools />
+        <Footer />
+      </div>
     </ThemeProvider>
   );
 }

@@ -1,6 +1,5 @@
 import { CalendarIcon, MailIcon } from 'lucide-react';
 import React from 'react';
-import { ModeToggle } from '@/components/Mode-Toggle';
 import { Button, buttonVariants } from '@/components/ui/button';
 import {
   Tooltip,
@@ -11,6 +10,7 @@ import {
 import { cn } from '@/lib/utils';
 import { Dock, DockIcon } from '@/components/magicui/dock';
 import { toast } from 'sonner';
+import { AnimatedThemeToggler } from './magicui/animated-theme-toggler';
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -91,7 +91,7 @@ export function DockNav() {
     toast.success('Email copied!');
   };
   return (
-    <div className="fixed hidden lg:block top-1/2 right-4 -translate-y-1/2 z-50 items-end">
+    <div className="fixed lg:block top-1/2 right-4 -translate-y-1/2 z-50 items-end">
       <TooltipProvider>
         <Dock iconMagnification={50} iconDistance={20} direction="bottom">
           {Object.entries(DATA.contact.social).map(([name, social]) => (
@@ -144,7 +144,7 @@ export function DockNav() {
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                <ModeToggle />
+                <AnimatedThemeToggler/>
               </TooltipTrigger>
               <TooltipContent>
                 <p>Theme</p>

@@ -3,7 +3,7 @@ import { navMenu } from '../data/navMenu';
 
 const Footer = () => {
   return (
-    <div className="min-w-screen py-5  ">
+    <div className=" py-5  ">
       <hr className=" w-full lg:w-[90%] mx-auto py-5" />
       <div className="flex flex-row justify-between items-center w-full lg:w-[60%] mx-auto">
         <div className="hidden lg:block">

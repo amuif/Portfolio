@@ -22,3 +22,22 @@ export const navMenu: linkProps[] = [
     href: '#skills',
   },
 ];
+
+export const navHeader = [
+  {
+    label: 'Home',
+    href: '#',
+  },
+  {
+    label: 'Projects',
+    href: '#projects',
+  },
+  {
+    label: 'Experience',
+    href: '#experience',
+  },
+  {
+    label: 'Skills',
+    href: '#skills',
+  },
+];
