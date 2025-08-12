@@ -10,6 +10,15 @@ const projects: projectProps[] = [
   },
   {
     id: 2,
+    name: 'Write wave',
+    href: 'https://writewave-eight.vercel.app/',
+    image: '/images/write-wave.png',
+    description:
+      'Supercharge your workflow with write wave— the smartest way to capture, organize, and link dev notes, code snippets, and technical insights.',
+  },
+
+  {
+    id: 3,
     name: 'Clarity',
     href: 'https://clarity-financee.vercel.app/',
     image: '/images/clarity.png',
@@ -17,16 +26,8 @@ const projects: projectProps[] = [
       'Take charge of your financial future with crystal-clear control over your finances. Simplify budgeting and track spending with AI-powered insights.',
   },
 
-  // {
-  //   id: 3,
-  //   name: 'Axon bot',
-  //   href: 'https://axonchatbot.vercel.app/',
-  //   image: '/images/chatbot.webp',
-  //   description:
-  //     'Axion is an intelligent AI chatbot designed to engage, assist, and converse like a human.',
-  // },
   {
-    id: 3,
+    id: 4,
     name: 'And many  more ',
     href: 'https://github.com/amuif?tab=repositories',
     image: '/images/GitHub_Light.webp',
