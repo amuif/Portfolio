@@ -6,13 +6,15 @@ import Footer from './components/Footer';
 import Tools from './components/Skills';
 import { ThemeProvider } from './components/Theme-Provider';
 import { DockNav } from './components/DockNav';
+import { useIsMobile } from './hooks/isMobile';
 function App() {
+  const isMobile = useIsMobile()
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <NavBar />
-      <DockNav />
+      {!isMobile && <DockNav/>}
+
       <Hero />
-      {/* <About />*/}
       <Projects />
       <Expreince />
       <Tools />
