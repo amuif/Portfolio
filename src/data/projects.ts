@@ -32,7 +32,8 @@ const projects: projectProps[] = [
     href: 'https://github.com/amuif?tab=repositories',
     image: '/images/GitHub_Light.webp',
     darkImage: '/images/GitHub_Dark.webp',
-    description: 'Discover more projects of mine on GitHub,\nwhere I showcase a variety of creative and technical works.\nDive into detailed code, explore different technologies, and see how I tackle unique challenges.'
+    description:
+      'Discover more projects of mine on GitHub,\nwhere I showcase a variety of creative and technical works.\nDive into detailed code, explore different technologies, and see how I tackle unique challenges.',
   },
 ];
 export default projects;

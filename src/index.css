@@ -209,11 +209,10 @@ button {
     @apply bg-background text-foreground;
     color: var(--foreground);
     background-color: var(--background);
-    margin: 0;
-    padding: 0;
   }
 }
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

@@ -144,7 +144,7 @@ export function DockNav() {
           <DockIcon>
             <Tooltip>
               <TooltipTrigger asChild>
-                <AnimatedThemeToggler/>
+                <AnimatedThemeToggler />
               </TooltipTrigger>
               <TooltipContent>
                 <p>Theme</p>

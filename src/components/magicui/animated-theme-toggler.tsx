@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { Moon, SunDim } from "lucide-react";
-import { useRef } from "react";
-import { flushSync } from "react-dom";
-import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
-import { useTheme } from "@/components/Theme-Provider";
+import { Moon, SunDim } from 'lucide-react';
+import { useRef } from 'react';
+import { flushSync } from 'react-dom';
+import { cn } from '@/lib/utils';
+import { Button } from '../ui/button';
+import { useTheme } from '@/components/Theme-Provider';
 
 type Props = {
   className?: string;
@@ -20,18 +20,19 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
 
     await document.startViewTransition(() => {
       flushSync(() => {
-        const newTheme = theme === "dark" ? "light" : "dark";
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
         setTheme(newTheme);
         // Also toggle 'dark' class on <html> for tailwind etc.
-        if (newTheme === "dark") {
-          document.documentElement.classList.add("dark");
+        if (newTheme === 'dark') {
+          document.documentElement.classList.add('dark');
         } else {
-          document.documentElement.classList.remove("dark");
+          document.documentElement.classList.remove('dark');
         }
       });
     }).ready;
 
-    const { top, left, width, height } = buttonRef.current.getBoundingClientRect();
+    const { top, left, width, height } =
+      buttonRef.current.getBoundingClientRect();
     const y = top + height / 2;
     const x = left + width / 2;
 
@@ -48,9 +49,9 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
       },
       {
         duration: 700,
-        easing: "ease-in-out",
-        pseudoElement: "::view-transition-new(root)",
-      }
+        easing: 'ease-in-out',
+        pseudoElement: '::view-transition-new(root)',
+      },
     );
   };
 
@@ -59,11 +60,10 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
       variant="ghost"
       ref={buttonRef}
       onClick={changeTheme}
-      className={cn("size-12 rounded-full", className)}
+      className={cn('size-12 rounded-full', className)}
       aria-label="Toggle theme"
     >
-      {theme === "dark" ? <SunDim /> : <Moon />}
+      {theme === 'dark' ? <SunDim /> : <Moon />}
     </Button>
   );
 };
-

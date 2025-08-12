@@ -45,8 +45,8 @@ const Projects = () => {
           ))}
         </div>
         <div className="w-full lg:w-[80%] mx-auto">
-          <Card className="flex-row  gap-2">
-            <div className="px-2">
+          <Card className="flex-col lg:flex-row  gap-2">
+            <div className="px-2 mx-auto">
               <img
                 src={
                   theme === 'light' ? projects[3].darkImage : projects[3].image
@@ -55,7 +55,7 @@ const Projects = () => {
                 className="h-48 w-48"
               />
             </div>
-            <div className="px-3 h-full w-full lg:w-1/2 flex-col gap-3">
+            <div className="px-3 py-2 h-full w-full lg:w-1/2 flex-col gap-3">
               <div className="text-left">
                 {' '}
                 <h3>{projects[3].name}</h3>
