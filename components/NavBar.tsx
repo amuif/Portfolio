@@ -16,25 +16,6 @@ const NavBar = () => {
         hoveredPillTextColor="#ffffff"
         pillTextColor="#000000"
       />
-      {/* <nav className="flex space-x-2"> */}
-      {/*   {navMenu.map((nav) => ( */}
-      {/*     <div key={nav.id}> */}
-      {/*       {" "} */}
-      {/*       <Button */}
-      {/*         size={isMobile ? "sm" : "default"} */}
-      {/*         variant="ghost" */}
-      {/*         className={`${hash === nav.href ? "!bg-primary text-white dark:text-black" : ""}`} */}
-      {/*       > */}
-      {/*         <a */}
-      {/*           href={nav.href} */}
-      {/*           className="p-2 rounded-full transition-all duration-500" */}
-      {/*         > */}
-      {/*           {nav.name} */}
-      {/*         </a>{" "} */}
-      {/*       </Button> */}
-      {/*     </div> */}
-      {/*   ))} */}
-      {/* </nav> */}
     </div>
   );
 };

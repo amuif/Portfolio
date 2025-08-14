@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="relative  flex flex-col items-center  min-h-[80dvh] justify-center">
         <TextAnimate
-          className="text-xl md:text-3xl lg:text-9xl font-bold text-pretty text-center"
+          className="text-4xl md:text-7xl lg:text-9xl font-bold text-pretty text-center"
           animation="slideDown"
           by="character"
         >

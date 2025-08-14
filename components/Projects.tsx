@@ -66,7 +66,7 @@ const Projects = () => {
                 <div className="text-pretty">{projects[3].description}</div>
               </div>
               <div className="pt-5">
-                <Button asChild>
+                <Button asChild className="w-full lg:w-fit">
                   <a href={projects[3].href}>Repositories</a>
                 </Button>
               </div>
