@@ -3,23 +3,21 @@ import type { experienceProps } from "../types/exprience";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { motion } from "framer-motion";
-import AnimatedTitle from "./AnimatedTitle";
 import { TextAnimate } from "./magicui/text-animate";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Expreince = () => {
   return (
-    <section id="experience" className="min-h-dvh w-full px-5 overflow-hidden ">
+    <section
+      id="experience"
+      className="min-h-screen pt-8 w-full px-5 overflow-hidden "
+    >
       <div className="flex size-full flex-col justify-start items-center py-10 pb-24">
         <div className="relative  size-full flex flex-col pb-5 gap-4 items-center justify-center text-center  pl-5">
           <TextAnimate className="text-sm uppercase md:text-base">
             Experience
           </TextAnimate>
-          <AnimatedTitle
-            title="The journey so far"
-            className="mt-5 font-bold text-center "
-          />
         </div>
         <div className="flex w-full lg:w-[80%]">
           <div>

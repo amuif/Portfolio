@@ -111,9 +111,25 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-html {
+html,
+body {
   scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+@media (min-width: 768px) {
+  .nav-hidden {
+    overflow: hidden;
+    width: 0;
+    visibility: hidden;
+  }
+}
+.mobile-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

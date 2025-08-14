@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import Link from "next/link";
 import projects from "../data/projects";
 import { TextAnimate } from "./magicui/text-animate";
 import { Button } from "./ui/button";
@@ -10,14 +10,11 @@ import {
   CardTitle,
 } from "./ui/card";
 import { useTheme } from "next-themes";
-
+import Image from "next/image";
 const Projects = () => {
   const { theme } = useTheme();
-  useEffect(() => {
-    console.log(theme);
-  }, [theme]);
   return (
-    <section className="min-h-screen px-3">
+    <section id="projects" className="min-h-screen pt-10 px-3">
       <div className="flex flex-col gap-5 pb-5 lg:pb-12 items-center justify-center text-center">
         <TextAnimate className="text-sm uppercase md:text-base text-black dark:text-white font-robert">
           Featured Projects
@@ -32,13 +29,18 @@ const Projects = () => {
               </CardHeader>
               <CardContent>
                 <div>
-                  <img src={project.image} alt={`${project.name} photo`} />
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} photo`}
+                    width={500}
+                    height={500}
+                  />
                 </div>
                 <div>{project.description}</div>
               </CardContent>
               <CardFooter>
-                <Button asChild>
-                  <a href={project.href}>Live demo</a>
+                <Button asChild className="w-full">
+                  <Link href={project.href}>Live demo</Link>
                 </Button>
               </CardFooter>
             </Card>
@@ -47,11 +49,13 @@ const Projects = () => {
         <div className="w-full lg:w-[80%] mx-auto">
           <Card className="flex-col lg:flex-row  gap-2">
             <div className="px-2 mx-auto">
-              <img
+              <Image
                 src={
-                  theme === "light" ? projects[3].darkImage : projects[3].image
+                  theme === "light" ? projects[3].darkImage! : projects[3].image
                 }
                 alt={`${projects[3].name} photo`}
+                width={500}
+                height={500}
                 className="h-48 w-48"
               />
             </div>
