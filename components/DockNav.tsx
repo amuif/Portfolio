@@ -81,11 +81,16 @@ const DATA = {
 
 export function DockNav() {
   return (
-    <div className="fixed lg:block top-1/2 right-4 -translate-y-1/2 z-50 items-end">
+    <div className="fixed lg:block top-1/2 right-4 -translate-y-1/2 z-50 items-end ">
       <TooltipProvider>
-        <Dock iconMagnification={50} iconDistance={20} direction="bottom">
+        <Dock
+          className="!backdrop-blur-none "
+          iconMagnification={50}
+          iconDistance={20}
+          direction="bottom"
+        >
           {Object.entries(DATA.contact.social).map(([name, social]) => (
-            <DockIcon key={name}>
+            <DockIcon key={name} className="bg-black/10 dark:bg-white/10">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a
@@ -107,12 +112,12 @@ export function DockNav() {
               </Tooltip>
             </DockIcon>
           ))}
-          <DockIcon>
+          <DockIcon className="bg-black/10 dark:bg-white/10">
             <Tooltip>
               <TooltipTrigger asChild>
                 <AnimatedThemeToggler />
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent className="bg-transparent">
                 <p>Theme</p>
               </TooltipContent>
             </Tooltip>

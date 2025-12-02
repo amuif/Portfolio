@@ -16,14 +16,13 @@ const projects: projectProps[] = [
     description:
       "Supercharge your workflow with write wave— the smartest way to capture, organize, and link dev notes, code snippets, and technical insights.",
   },
-
   {
     id: 3,
-    name: "Clarity",
-    href: "https://clarity-financee.vercel.app/",
-    image: "/images/clarity.png",
+    name: "Citizen charter portal",
+    href: "https://aatmadcs.et/",
+    image: "/images/logo.png",
     description:
-      "Take charge of your financial future with crystal-clear control over your finances. Simplify budgeting and track spending with AI-powered insights.",
+      "The Charter is a site that outlines the services provided by the Addis Ababa Traffic Management Authority, and the rights of citizens.",
   },
 
   {

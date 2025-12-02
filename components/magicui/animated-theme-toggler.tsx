@@ -18,6 +18,17 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
   const changeTheme = async () => {
     if (!buttonRef.current) return;
 
+    const doToggle = () => {
+      const newTheme = theme === "dark" ? "light" : "dark";
+      setTheme(newTheme);
+      document.documentElement.classList.toggle("dark", newTheme === "dark");
+      return newTheme;
+    };
+
+    if (!document.startViewTransition) {
+      doToggle();
+      return;
+    }
     await document.startViewTransition(() => {
       flushSync(() => {
         const newTheme = theme === "dark" ? "light" : "dark";
@@ -55,14 +66,16 @@ export const AnimatedThemeToggler = ({ className }: Props) => {
   };
 
   return (
-    <Button
-      variant="ghost"
-      ref={buttonRef}
-      onClick={changeTheme}
-      className={cn("size-12 rounded-full", className)}
-      aria-label="Toggle theme"
-    >
-      {theme === "dark" ? <SunDim /> : <Moon />}
-    </Button>
+    <div className="bg-transparent">
+      <Button
+        variant="ghost"
+        ref={buttonRef}
+        onClick={changeTheme}
+        className={cn("size-12 rounded-full ", className)}
+        aria-label="Toggle theme"
+      >
+        {theme === "dark" ? <SunDim /> : <Moon />}
+      </Button>
+    </div>
   );
 };

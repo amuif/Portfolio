@@ -17,7 +17,7 @@ import { TbBrandThreejs } from "react-icons/tb";
 import { FaLaravel } from "react-icons/fa";
 import { SiAstro } from "react-icons/si";
 import { SiGreensock } from "react-icons/si";
-
+import { SiSvelte } from "react-icons/si";
 interface ToolName {
   id: number;
   name: string;
@@ -83,36 +83,41 @@ export const frameworksAndLibraries: ToolName[] = [
   },
   {
     id: 4,
+    name: "Svelte",
+    icon: SiSvelte,
+  },
+  {
+    id: 5,
     name: "Nest Js",
     icon: SiNestjs,
   },
   {
-    id: 5,
+    id: 6,
     name: "Express Js",
     icon: SiExpress,
   },
   {
-    id: 6,
+    id: 7,
     name: "ThreeJs",
     icon: TbBrandThreejs,
   },
   {
-    id: 7,
+    id: 8,
     name: "Framer Motion",
     icon: TbBrandFramerMotion,
   },
   {
-    id: 8,
+    id: 9,
     name: "GSAP",
     icon: SiGreensock,
   },
   {
-    id: 9,
+    id: 10,
     name: "Laravel",
     icon: FaLaravel,
   },
   {
-    id: 10,
+    id: 11,
     name: "Astro",
     icon: SiAstro,
   },

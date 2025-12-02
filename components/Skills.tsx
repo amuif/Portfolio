@@ -37,7 +37,7 @@ const Tools = () => {
         </div>
         <div>
           <h3 className="text-xl text-center ">Frameworks and Libraries</h3>
-          <div className="flex items-center pt-5 justify-center gap-5 flex-wrap ">
+          <div className="flex items-center pt-5 justify-center gap-7 flex-wrap ">
             {frameworksAndLibraries.map(({ id, name, icon: Icon }) => (
               <div
                 key={id}
