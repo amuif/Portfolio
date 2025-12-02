@@ -1,6 +1,29 @@
+import { motion } from "framer-motion";
 import { TextAnimate } from "./magicui/text-animate";
 import Particles from "./ui/Particles/Particles";
+import { ShimmerButton } from "./ui/shimmer-button";
 const Hero = () => {
+  
+
+  const handleDownload = async () => {
+
+    try {
+      const filePath = "/resume.pdf";
+      const fileName = "Ibrahim Hassen Resume.pdf";
+      
+      const link = document.createElement("a");
+      link.href = filePath;
+      link.download = fileName;
+      
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+     
+    } catch (error) {
+      console.error("Download error:", error);
+   }
+  };
   return (
     <div className="min-h-screen relative" id="hero">
       <div className="absolute inset-0 z-0">
@@ -43,6 +66,19 @@ const Hero = () => {
             Turning ideas into interactive web magic
           </TextAnimate>
         </div>
+        <motion.div
+          className="w-32 pt-5"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.5,
+            delay: 0.2
+          }}
+        >
+          <ShimmerButton className="w-full" onClick={handleDownload}>Get CV</ShimmerButton>
+        </motion.div>  
+
       </div>
     </div>
   );
