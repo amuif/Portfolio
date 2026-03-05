@@ -30,7 +30,7 @@ const Projects = () => {
               <CardContent>
                 <div>
                   <Image
-                    src={project.image}
+                    src={project?.image}
                     alt={`${project.name} photo`}
                     width={500}
                     height={500}
@@ -51,9 +51,9 @@ const Projects = () => {
             <div className="px-2 mx-auto">
               <Image
                 src={
-                  theme === "light" ? projects[3].darkImage! : projects[3].image
+                  theme === "light" ? projects[2].darkImage! : projects[2].image
                 }
-                alt={`${projects[3].name} photo`}
+                alt={`${projects[2].name} photo`}
                 width={500}
                 height={500}
                 className="h-48 w-48"
@@ -62,12 +62,12 @@ const Projects = () => {
             <div className="px-3 py-2 h-full w-full lg:w-1/2 flex-col gap-3">
               <div className="text-left">
                 {" "}
-                <h3>{projects[3].name}</h3>
-                <div className="text-pretty">{projects[3].description}</div>
+                <h3>{projects[2].name}</h3>
+                <div className="text-pretty">{projects[2].description}</div>
               </div>
               <div className="pt-5">
                 <Button asChild className="w-full lg:w-fit">
-                  <a href={projects[3].href}>Repositories</a>
+                  <a href={projects[2].href}>Repositories</a>
                 </Button>
               </div>
             </div>

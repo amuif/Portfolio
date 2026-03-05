@@ -3,6 +3,7 @@ import { useRef, useState, type ReactNode } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 type BentoCardProps = {
   src: string;
   title: string;
@@ -36,9 +37,11 @@ const BentoCard = ({
           </div>
         </div>
         <div className="p-5 h-full w-full lg:w-1/2 hidden lg:block">
-          <img
+          <Image
             src={theme === "light" && darkImage ? darkImage : src}
             alt={title}
+            width={500}
+            height={500}
             className="h-full text-black dark:text-white fill-white rounded-lg w-full object-contain object-center"
           />
         </div>
