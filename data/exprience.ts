@@ -1,6 +1,6 @@
 import type { experienceProps } from "../types/exprience";
 const experience: experienceProps[] = [
-   {
+  {
     id: 1,
     name: "Wavic",
     duration: "Dec, 2024 - 2025",

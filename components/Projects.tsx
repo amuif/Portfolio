@@ -21,8 +21,8 @@ const Projects = () => {
         </TextAnimate>
       </div>
       <div className="flex-col space-y-4 gap-2">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
-          {projects.slice(0, 3).map((project) => (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          {projects.slice(0, 2).map((project) => (
             <Card key={project.id}>
               <CardHeader>
                 <CardTitle>{project.name}</CardTitle>
