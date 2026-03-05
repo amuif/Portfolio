@@ -1,13 +1,13 @@
 import type { projectProps } from "../types/projects";
 const projects: projectProps[] = [
-  {
-    id: 1,
-    name: "Wavic",
-    href: "https://www.wavic.pro/",
-    image: "/images/wavic.webp",
-    description:
-      "Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.",
-  },
+  // {
+  //   id: 1,
+  //   name: "Wavic",
+  //   href: "https://www.wavic.pro/",
+  //   image: "/images/wavic.webp",
+  //   description:
+  //     "Wavic is a Barcelona-based startup founded in 2022, offering a collaborative platform designed to streamline  production workflows.",
+  // },
   {
     id: 2,
     name: "Write wave",
