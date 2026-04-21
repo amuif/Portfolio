@@ -21,8 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        suppressHydrationWarning
+        
         className={` ${geistMono.className} antialiased`}
+        suppressHydrationWarning
       >
         <ThemeProvider
           attribute="class"

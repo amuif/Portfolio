@@ -34,9 +34,10 @@ const Projects = () => {
                     alt={`${project.name} photo`}
                     width={500}
                     height={500}
+                    className="h-[250px] md:h-[500px] w-full object-cover rounded-md"
                   />
                 </div>
-                <div>{project.description}</div>
+                <div className="mt-2">{project.description}</div>
               </CardContent>
               <CardFooter>
                 <Button asChild className="w-full">
