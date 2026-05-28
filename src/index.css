@@ -1,3 +1,7 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -5,6 +9,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-grotesk: "Space Grotesk", sans-serif; 
+  --font-archivo: "Archivo Black", sans-serif;
+}
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: "Geist Variable", sans-serif;
