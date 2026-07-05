@@ -1,5 +1,6 @@
 import { SectionHeading } from "./section-heading";
 import { ArrowRight } from "lucide-react";
+import { Button } from "./ui/button";
 
 const PROJECTS = [
     {
@@ -42,50 +43,64 @@ const PROJECTS = [
         live: "#",
         span: "md:col-span-2 md:row-span-1" // Wide card
     },
-    {
-        title: "Weather Station",
-        description: "A highly visual weather forecasting progressive web app.",
-        color: "bg-sky-100 dark:bg-sky-900/40 text-foreground",
-        tags: ["PWA", "APIs"],
-        live: "#",
-        span: "md:col-span-3 md:row-span-1" // Full width card
-    }
 ];
 
 export const Projects = () => {
     return (
         <section id="projects" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
             <SectionHeading title="Selected Works" color="bg-blue-100 dark:bg-blue-900/40 text-foreground" />
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 auto-rows-[250px]">
                 {PROJECTS.map((project, idx) => (
                     <div key={idx} className={`group relative flex h-full flex-col overflow-hidden border-4 border-foreground bg-background text-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_var(--color-foreground)] ${project.span}`}>
-                        
+
                         <div className={`h-24 md:h-32 w-full border-b-4 border-foreground ${project.color} p-4 flex items-center justify-center shrink-0`}>
                             <h3 className="text-center text-xl md:text-2xl font-black uppercase rotate-[-3deg] group-hover:rotate-0 transition-transform line-clamp-2">
                                 {project.title}
                             </h3>
                         </div>
 
-                        <div className="flex flex-1 flex-col p-4">
+                        <div className={`flex flex-1 flex-col p-4 ${project.title === 'Weather Station' ? 'pb-8 md:pb-12' : ''}`}>
                             <p className="mb-4 flex-1 text-sm font-medium leading-snug line-clamp-3">
                                 {project.description}
                             </p>
-                            
+
                             <div className="mb-4 flex flex-wrap gap-2 mt-auto">
-                                {project.tags.map((tag, tIdx) => (
+                                {project?.tags.map((tag, tIdx) => (
                                     <span key={tIdx} className="border-2 border-foreground bg-zinc-100 dark:bg-zinc-800 text-foreground px-2 py-0.5 rounded-full text-[10px] font-bold uppercase shadow-[2px_2px_0_0_var(--color-foreground)] whitespace-nowrap">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
-                            
+
                             <a href={project.live} className="flex items-center justify-center gap-2 border-2 border-foreground bg-indigo-100 dark:bg-indigo-900/50 text-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
                                 Live Demo <ArrowRight className="h-3 w-3" />
                             </a>
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className={`group relative mt-4 flex h-full flex-col overflow-hidden border-4 border-foreground bg-background text-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_var(--color-foreground)]`}>
+
+                <div className={`h-24 md:h-32 w-full border-b-4 border-foreground  p-4 flex items-center justify-center shrink-0`}>
+                    <h3 className="text-center text-xl md:text-2xl font-black uppercase rotate-[-3deg] group-hover:rotate-0 transition-transform line-clamp-2">
+                        Github
+                    </h3>
+                </div>
+
+                <div className={`flex flex-1 flex-col p-4 `}>
+                    <p className="mb-4 flex-1 text-sm font-medium leading-snug line-clamp-3">
+                        All my projects are available on github
+                    </p>
+
+
+
+                    <Button onClick={() => {
+                        window.open('https://github.com/amuif', '_blank');
+                    }} className="flex items-center justify-center gap-2 border-2 border-foreground bg-indigo-100 dark:bg-indigo-900/50 text-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
+                        Repositories
+                    </Button>
+                </div>
             </div>
         </section>
     );
