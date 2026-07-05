@@ -18,8 +18,13 @@ export const navMenu: linkProps[] = [
   },
   {
     id: 4,
+    name: "Testimonials",
+    href: "#testimonials",
+  },
+  {
+    id: 5,
     name: "Skills",
-    href: "#skills",
+    href: "#tech-stacks",
   },
 ];
 
@@ -37,7 +42,11 @@ export const navHeader = [
     href: "#experience",
   },
   {
+    label: "Testimonials",
+    href: "#testimonials",
+  },
+  {
     label: "Skills",
-    href: "#skills",
+    href: "#tech-stacks",
   },
 ];

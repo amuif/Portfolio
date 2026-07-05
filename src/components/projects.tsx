@@ -5,7 +5,7 @@ const PROJECTS = [
     {
         title: "Retro E-Commerce",
         description: "A full-stack e-commerce platform built with Next.js and Prisma.",
-        color: "bg-primary text-primary-foreground",
+        color: "bg-rose-100 dark:bg-rose-900/40 text-foreground",
         tags: ["Next.js", "TailwindCSS"],
         live: "#",
         span: "md:col-span-2 md:row-span-2" // Large card
@@ -13,7 +13,7 @@ const PROJECTS = [
     {
         title: "TaskMaster Pro",
         description: "A drag-and-drop task management tool with real-time updates.",
-        color: "bg-secondary text-secondary-foreground",
+        color: "bg-cyan-100 dark:bg-cyan-900/40 text-foreground",
         tags: ["React", "Zustand"],
         live: "#",
         span: "md:col-span-1 md:row-span-1" // Small card
@@ -21,7 +21,7 @@ const PROJECTS = [
     {
         title: "DevBlog Platform",
         description: "A high-performance blogging platform for developers.",
-        color: "bg-primary text-primary-foreground",
+        color: "bg-amber-100 dark:bg-amber-900/40 text-foreground",
         tags: ["Astro", "MDX"],
         live: "#",
         span: "md:col-span-1 md:row-span-1" // Small card
@@ -29,7 +29,7 @@ const PROJECTS = [
     {
         title: "AI Chat Interface",
         description: "A seamless conversational UI for modern AI models.",
-        color: "bg-secondary text-secondary-foreground",
+        color: "bg-fuchsia-100 dark:bg-fuchsia-900/40 text-foreground",
         tags: ["OpenAI", "React"],
         live: "#",
         span: "md:col-span-1 md:row-span-1" // Small card
@@ -37,7 +37,7 @@ const PROJECTS = [
     {
         title: "Crypto Dashboard",
         description: "Real-time analytics and portfolio tracker for cryptocurrency.",
-        color: "bg-primary text-primary-foreground",
+        color: "bg-lime-100 dark:bg-lime-900/40 text-foreground",
         tags: ["Web3", "Vue"],
         live: "#",
         span: "md:col-span-2 md:row-span-1" // Wide card
@@ -45,7 +45,7 @@ const PROJECTS = [
     {
         title: "Weather Station",
         description: "A highly visual weather forecasting progressive web app.",
-        color: "bg-secondary text-secondary-foreground",
+        color: "bg-sky-100 dark:bg-sky-900/40 text-foreground",
         tags: ["PWA", "APIs"],
         live: "#",
         span: "md:col-span-3 md:row-span-1" // Full width card
@@ -55,7 +55,7 @@ const PROJECTS = [
 export const Projects = () => {
     return (
         <section id="projects" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-            <SectionHeading title="Selected Works" color="bg-secondary text-secondary-foreground" />
+            <SectionHeading title="Selected Works" color="bg-blue-100 dark:bg-blue-900/40 text-foreground" />
             
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 auto-rows-[250px]">
                 {PROJECTS.map((project, idx) => (
@@ -74,13 +74,13 @@ export const Projects = () => {
                             
                             <div className="mb-4 flex flex-wrap gap-2 mt-auto">
                                 {project.tags.map((tag, tIdx) => (
-                                    <span key={tIdx} className="border-2 border-foreground bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full text-[10px] font-bold uppercase shadow-[2px_2px_0_0_var(--color-foreground)] whitespace-nowrap">
+                                    <span key={tIdx} className="border-2 border-foreground bg-zinc-100 dark:bg-zinc-800 text-foreground px-2 py-0.5 rounded-full text-[10px] font-bold uppercase shadow-[2px_2px_0_0_var(--color-foreground)] whitespace-nowrap">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
                             
-                            <a href={project.live} className="flex items-center justify-center gap-2 border-2 border-foreground bg-primary text-primary-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
+                            <a href={project.live} className="flex items-center justify-center gap-2 border-2 border-foreground bg-indigo-100 dark:bg-indigo-900/50 text-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
                                 Live Demo <ArrowRight className="h-3 w-3" />
                             </a>
                         </div>

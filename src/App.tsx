@@ -3,6 +3,7 @@ import NavBar from "./components/nav-bar";
 import { Projects } from "./components/projects";
 import { Experience } from "./components/experience";
 import { TechStacks } from "./components/tech-stacks";
+import { Testimonials } from "./components/testimonials";
 import { Footer } from "./components/footer";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Projects />
         <Experience />
+        <Testimonials />
         <TechStacks />
       </main>
       <Footer />
