@@ -1,6 +1,5 @@
 import type { linkProps } from "../types/nav-link";
 
-
 export const navMenu: linkProps[] = [
   {
     id: 1,
