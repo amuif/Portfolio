@@ -50,7 +50,7 @@ export const Projects = () => {
         <section id="projects" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
             <SectionHeading title="Selected Works" color="bg-blue-100 dark:bg-blue-900/40 text-foreground" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 auto-rows-[250px]">
+            <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 auto-rows-[350px]">
                 {PROJECTS.map((project, idx) => (
                     <div key={idx} className={`group relative flex h-full flex-col overflow-hidden border-4 border-foreground bg-background text-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] ${project.span}`}>
 
