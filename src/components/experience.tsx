@@ -36,11 +36,11 @@ export const Experience = () => {
         <section id="experience" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
             <SectionHeading title="Experience" color="bg-emerald-100 dark:bg-emerald-900/50 text-foreground" />
 
-            <div className="relative border-l-4 border-foreground ml-4 md:ml-0 md:pl-8">
+            <div className="relative border-l-4 border-foreground ml-1 md:ml-0 md:pl-8">
                 {EXPERIENCES.map((exp, idx) => (
                     <div key={idx} className="mb-10 ml-6 md:ml-10 relative">
                         {/* Timeline dot */}
-                        <div className={`absolute -left-8.5 md:-left-12 top-4 h-4 w-4 rounded-full border-2 border-foreground ${exp.color} z-10`} />
+                        <div className={`absolute -left-5 md:-left-12 top-4 h-4 w-4 rounded-full border-2 border-foreground ${exp.color} z-10`} />
 
                         <div className="border-4 border-foreground bg-background text-foreground p-5 shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)]">
                             <div className="flex flex-col md:flex-row md:items-center justify-between mb-3 gap-2">
