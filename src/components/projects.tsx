@@ -9,7 +9,7 @@ const PROJECTS = [
         color: "bg-rose-100 dark:bg-rose-900/40 text-foreground",
         tags: ["Next.js", "TailwindCSS"],
         live: "#",
-        span: "md:col-span-2 md:row-span-2" // Large card
+        span: "md:col-span-2 md:row-span-1"
     },
     {
         title: "TaskMaster Pro",
@@ -33,15 +33,15 @@ const PROJECTS = [
         color: "bg-fuchsia-100 dark:bg-fuchsia-900/40 text-foreground",
         tags: ["OpenAI", "React"],
         live: "#",
-        span: "md:col-span-1 md:row-span-1" // Small card
+        span: "md:col-span-2 md:row-span-1" // Small card
     },
     {
-        title: "Crypto Dashboard",
+        title: "Github",
         description: "Real-time analytics and portfolio tracker for cryptocurrency.",
         color: "bg-lime-100 dark:bg-lime-900/40 text-foreground",
-        tags: ["Web3", "Vue"],
+        tags: [],
         live: "#",
-        span: "md:col-span-2 md:row-span-1" // Wide card
+        span: "md:col-span-3 md:row-span-1"
     },
 ];
 
@@ -80,28 +80,7 @@ export const Projects = () => {
                     </div>
                 ))}
             </div>
-            <div className={`group relative mt-4 flex h-full flex-col overflow-hidden border-4 border-foreground bg-background text-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_var(--color-foreground)]`}>
-
-                <div className={`h-24 md:h-32 w-full border-b-4 border-foreground  p-4 flex items-center justify-center shrink-0`}>
-                    <h3 className="text-center text-xl md:text-2xl font-black uppercase rotate-[-3deg] group-hover:rotate-0 transition-transform line-clamp-2">
-                        Github
-                    </h3>
-                </div>
-
-                <div className={`flex flex-1 flex-col p-4 `}>
-                    <p className="mb-4 flex-1 text-sm font-medium leading-snug line-clamp-3">
-                        All my projects are available on github
-                    </p>
-
-
-
-                    <Button onClick={() => {
-                        window.open('https://github.com/amuif', '_blank');
-                    }} className="flex items-center justify-center gap-2 border-2 border-foreground bg-indigo-100 dark:bg-indigo-900/50 text-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
-                        Repositories
-                    </Button>
-                </div>
-            </div>
+        
         </section>
     );
 };
