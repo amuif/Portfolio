@@ -1,9 +1,9 @@
 import cvPdf from "../data/cv.pdf";
-import { ArrowRight, Code, Share2 } from "lucide-react";
+import { ArrowRight, Code } from "lucide-react";
 
 const Hero = () => {
     return (
-        <section id="hero" className="relative mx-auto flex min-h-[85dvh] w-full max-w-6xl flex-col items-center justify-center px-4 py-12 text-center sm:px-6 lg:px-8">
+        <section id="hero" className="relative mx-auto flex min-h-[85dvh] w-full max-w-6xl flex-col items-center justify-center px-4 py-8 text-center sm:px-6 lg:px-8">
             {/* Decorative background shapes */}
             <div className="absolute top-10 left-10 h-16 w-16 rounded-full border-4 border-foreground bg-pink-200 dark:bg-pink-900/50 shadow-[4px_4px_0_0_var(--color-foreground)] max-md:hidden" />
             <div className="absolute right-10 bottom-20 h-24 w-24 rotate-12 border-4 border-foreground bg-blue-200 dark:bg-blue-900/50 shadow-[6px_6px_0_0_var(--color-foreground)] max-md:hidden" />
@@ -32,18 +32,19 @@ const Hero = () => {
                     <a
                         href={cvPdf}
                         download
-                        className="flex items-center gap-2 border-4 border-foreground bg-emerald-200 dark:bg-emerald-900/50 text-foreground px-6 py-3 text-sm font-black uppercase tracking-wider shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_var(--color-foreground)]"
+                        className="flex items-center gap-2 border-4 border-foreground bg-emerald-200 dark:bg-emerald-900/50 text-foreground px-6 py-3 text-sm font-black uppercase tracking-wider shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_0_var(--color-foreground)]"
                     >
                         Get CV <ArrowRight className="h-5 w-5" />
                     </a>
 
                     <div className="flex gap-3">
-                        <a href="https://github.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center border-4 border-foreground bg-background text-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_var(--color-foreground)]" aria-label="GitHub">
-                            <Code className="h-5 w-5" />
+                        <a href="https://github.com/amuif" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center border-4 border-foreground bg-background dark:bg-white text-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_0_var(--color-foreground)]" aria-label="GitHub">
+                            {/* <Code className="h-5 w-5" /> */}
+                            <img src="/github.svg" alt="GitHub" className="h-7 w-7 " />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center border-4 border-foreground bg-blue-100 dark:bg-blue-900/50 text-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_var(--color-foreground)]" aria-label="LinkedIn">
+                        {/* <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center border-4 border-foreground bg-blue-100 dark:bg-blue-900/50 text-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0_0_var(--color-foreground)]" aria-label="LinkedIn">
                             <Share2 className="h-5 w-5" />
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </div>
