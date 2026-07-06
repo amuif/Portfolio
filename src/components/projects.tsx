@@ -1,46 +1,46 @@
 import { SectionHeading } from "./section-heading";
 import { ArrowRight } from "lucide-react";
-import { Button } from "./ui/button";
+
 
 const PROJECTS = [
     {
-        title: "Retro E-Commerce",
-        description: "A full-stack e-commerce platform built with Next.js and Prisma.",
+        title: "SAAS Landing Page",
+        description: "A high-performance SaaS landing page built to showcase seamless user experiences and fluid micro-interactions. Focuses on structured layouts, optimized asset delivery, and responsive UI components.",
         color: "bg-rose-100 dark:bg-rose-900/40 text-foreground",
-        tags: ["Next.js", "TailwindCSS"],
-        live: "#",
+        tags: ["Vite", "GSAP", "TailwindCSS"],
+        live: "https://landingpagedemogsap.netlify.app/",
         span: "md:col-span-2 md:row-span-1"
     },
     {
-        title: "TaskMaster Pro",
-        description: "A drag-and-drop task management tool with real-time updates.",
+        title: "Admin Dashboard",
+        description: "A high-performance drag-and-drop task management tool featuring real-time state synchronization, secure user authentication, and a responsive, modern analytics UI.",
         color: "bg-cyan-100 dark:bg-cyan-900/40 text-foreground",
-        tags: ["React", "Zustand"],
-        live: "#",
-        span: "md:col-span-1 md:row-span-1" // Small card
+        tags: ["Svelete", "SvelteKit", "Superbase", "TailwindCSS", "SQLite"],
+        live: "https://svelte-admin-panel.vercel.app/login",
+        span: "md:col-span-1 md:row-span-1"
     },
     {
-        title: "DevBlog Platform",
-        description: "A high-performance blogging platform for developers.",
+        title: "BookBites",
+        description: "Concise, spoiler-free perspectives on the best fantasy and sci-fi. We dive deep into the soul of the story so you don't have to.",
         color: "bg-amber-100 dark:bg-amber-900/40 text-foreground",
-        tags: ["Astro", "MDX"],
-        live: "#",
-        span: "md:col-span-1 md:row-span-1" // Small card
+        tags: ["Astro", "TailwindCSS"],
+        live: "https://bookbites-two.vercel.app/",
+        span: "md:col-span-1 md:row-span-1"
     },
     {
-        title: "AI Chat Interface",
-        description: "A seamless conversational UI for modern AI models.",
-        color: "bg-fuchsia-100 dark:bg-fuchsia-900/40 text-foreground",
-        tags: ["OpenAI", "React"],
-        live: "#",
-        span: "md:col-span-2 md:row-span-1" // Small card
+        title: "Dire Dawa Transport Citizen Charter Portal",
+        description: "An official public service portal designed to give citizens seamless access to transport services, complaint tracking, staff directories, and service quality ratings.",
+        color: "bg-blue-100 dark:bg-blue-900/40 text-foreground",
+        tags: ["Next.js", "Tanstack Query", "TailwindCSS", "Express", "SQL"],
+        live: "https://diredawatransport.org/",
+        span: "md:col-span-2 md:row-span-1"
     },
     {
-        title: "Github",
-        description: "Real-time analytics and portfolio tracker for cryptocurrency.",
+        title: "GitHub Profile",
+        description: "The central hub for my open-source contributions, core architecture projects, production web applications, and experimental full-stack development tooling.",
         color: "bg-lime-100 dark:bg-lime-900/40 text-foreground",
-        tags: [],
-        live: "#",
+        tags: ["Open Source", "Software Architecture", "Full-Stack Development", "Monorepos"],
+        live: "https://github.com/amuif",
         span: "md:col-span-3 md:row-span-1"
     },
 ];
@@ -52,10 +52,10 @@ export const Projects = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-3 gap-6 auto-rows-[250px]">
                 {PROJECTS.map((project, idx) => (
-                    <div key={idx} className={`group relative flex h-full flex-col overflow-hidden border-4 border-foreground bg-background text-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_var(--color-foreground)] ${project.span}`}>
+                    <div key={idx} className={`group relative flex h-full flex-col overflow-hidden border-4 border-foreground bg-background text-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] ${project.span}`}>
 
                         <div className={`h-24 md:h-32 w-full border-b-4 border-foreground ${project.color} p-4 flex items-center justify-center shrink-0`}>
-                            <h3 className="text-center text-xl md:text-2xl font-black uppercase rotate-[-3deg] group-hover:rotate-0 transition-transform line-clamp-2">
+                            <h3 className="text-center text-xl md:text-2xl font-black uppercase -rotate-3 group-hover:rotate-0 transition-transform line-clamp-2">
                                 {project.title}
                             </h3>
                         </div>
@@ -73,14 +73,14 @@ export const Projects = () => {
                                 ))}
                             </div>
 
-                            <a href={project.live} className="flex items-center justify-center gap-2 border-2 border-foreground bg-indigo-100 dark:bg-indigo-900/50 text-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
+                            <a href={project.live} target="_blank" rel='noreferrer' className="flex items-center justify-center gap-2 border-2 border-foreground bg-indigo-100 dark:bg-indigo-900/50 text-foreground px-3 py-1.5 font-bold shadow-[3px_3px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[1px_1px_0_0_var(--color-foreground)] uppercase text-xs w-fit">
                                 Live Demo <ArrowRight className="h-3 w-3" />
                             </a>
                         </div>
                     </div>
                 ))}
             </div>
-        
+
         </section>
     );
 };

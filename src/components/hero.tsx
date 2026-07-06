@@ -1,5 +1,5 @@
 import cvPdf from "../data/cv.pdf";
-import { ArrowRight, Code } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
     return (
