@@ -32,7 +32,7 @@ export const Testimonials = () => {
             
             <div className="grid gap-6 md:grid-cols-3 mt-4">
                 {TESTIMONIALS.map((testimonial, idx) => (
-                    <div key={idx} className={`relative flex flex-col p-6 border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground ${testimonial.color}`}>
+                    <div key={idx} className={`relative flex flex-col p-6 border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground ${testimonial.color}`}>
                         <div className="flex items-center gap-4 mb-5 border-b-2 border-dashed border-foreground pb-4">
                             <div className="flex shrink-0 items-center justify-center h-12 w-12 rounded-full border-2 border-foreground bg-background text-foreground shadow-[2px_2px_0_0_var(--color-foreground)]">
                                 <User className="h-6 w-6" />

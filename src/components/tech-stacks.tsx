@@ -1,8 +1,8 @@
 import { SectionHeading } from "./section-heading";
 
 const STACKS = [
-    "JavaScript", "TypeScript", "React", "Next.js", "TailwindCSS", "Node.js", "Express", 
-    "PostgreSQL", "MongoDB", "Figma", "Git", "Docker", "Prisma", "Vite"
+    "JavaScript", "TypeScript", "Python", "Go", "React", "Next.js", "TailwindCSS", "Node.js", "Express",
+    "PostgreSQL", "SQL", "Figma", "Git", "Docker", "Prisma", "Vite", "Tasntack"
 ];
 
 const COLORS = [
@@ -27,12 +27,12 @@ export const TechStacks = () => {
         <section id="tech-stacks" className="w-full bg-zinc-50 dark:bg-zinc-950/50 py-16 border-y-4 border-foreground">
             <div className="mx-auto w-full px-4 sm:px-6 lg:px-8">
                 <SectionHeading title="Skills" color="bg-rose-100 dark:bg-rose-900/50 text-foreground" />
-                
+
                 <div className="flex flex-wrap justify-center gap-3 md:gap-4 mt-8">
                     {STACKS.map((tech, idx) => (
-                        <div 
-                            key={idx} 
-                            className={`flex items-center justify-center border-4 border-foreground px-4 py-2 text-sm md:text-base font-black uppercase text-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_var(--color-foreground)] ${COLORS[idx % COLORS.length]}`}
+                        <div
+                            key={idx}
+                            className={`flex items-center justify-center border-4 border-foreground px-4 py-2 text-sm md:text-base font-black uppercase text-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] ${COLORS[idx % COLORS.length]}`}
                         >
                             {tech}
                         </div>
