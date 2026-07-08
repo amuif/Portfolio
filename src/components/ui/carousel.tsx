@@ -185,7 +185,7 @@ function CarouselPrevious({
       className={cn(
         "absolute size-8 touch-manipulation rounded",
         orientation === "horizontal"
-          ? "top-1/2 -left-12 -translate-y-1/2 hover:-translate-y-[calc(50%-2px)] active:-translate-y-[calc(50%-4px)]"
+          ? "top-1/2 -left-12 "
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90 hover:-translate-x-[calc(50%-2px)] active:-translate-x-[calc(50%-4px)]",
         className
       )}
@@ -215,7 +215,7 @@ function CarouselNext({
       className={cn(
         "absolute size-8 touch-manipulation rounded",
         orientation === "horizontal"
-          ? "top-1/2 -right-12 -translate-y-1/2 hover:-translate-y-[calc(50%-2px)] active:-translate-y-[calc(50%-4px)]"
+          ? "top-1/2 -right-12"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90 hover:-translate-x-[calc(50%-2px)] active:-translate-x-[calc(50%-4px)]",
         className
       )}

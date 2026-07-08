@@ -7,7 +7,7 @@ const TESTIMONIALS = [
         name: "Lidetu Tadesse",
         role: "Founder",
         company: "4k Labs",
-        message: "He possesses exceptional technical skills, particularly in web development, and consistently takes full ownership of his projects to deliver high-quality results. I highly recommend him.",
+        message: "He possesses exceptional technical skills, particularly in web development, and consistently takes full ownership of his projects to deliver high-quality results. Combining stellar communication with a highly accountable work ethic, he ensures a smooth development process from start to finish. He doesn't just build functional applications; he focuses heavily on performance, clean architecture, and modern best practices to ensure the codebase is scalable and optimized. I highly recommend him as an invaluable asset to any engineering team.",
         color: "bg-orange-100 dark:bg-orange-900/40"
     },
     {
@@ -31,7 +31,6 @@ export const Testimonials = () => {
             <SectionHeading title="Testimonials" color="bg-yellow-100 dark:bg-yellow-900/40 text-foreground" />
             <Carousel opts={{loop:true}}>
                 <CarouselContent>
-
                     {TESTIMONIALS.map((testimonial, idx) => (
                         <CarouselItem key={idx}>
                             <div  className={`relative flex flex-col p-6 border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground ${testimonial.color}`}>
@@ -55,8 +54,8 @@ export const Testimonials = () => {
                     ))}
 
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious  className='border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground'/>
+                <CarouselNext  className='border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground' />
             </Carousel>
         </section>
     );
