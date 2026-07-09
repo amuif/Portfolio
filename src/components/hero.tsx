@@ -1,4 +1,4 @@
-import cvPdf from "../data/cv.pdf";
+import cvPdf from "../data/Ibrahim_latest_cv.pdf";
 import { ArrowRight } from "lucide-react";
 
 const Hero = () => {

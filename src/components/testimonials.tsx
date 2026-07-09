@@ -133,7 +133,7 @@ export const Testimonials = () => {
                     <button
                         onClick={prevSlide}
                         disabled={isTransitioning}
-                        className="static border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground bg-background rounded-md p-2 md:absolute md:-left-2 md:top-1/2 md:-translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="static border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground bg-background p-2 md:absolute md:-left-2 md:top-1/2 md:-translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
                         aria-label="Previous testimonial"
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -143,7 +143,7 @@ export const Testimonials = () => {
                     <button
                         onClick={nextSlide}
                         disabled={isTransitioning}
-                        className="static border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground bg-background rounded-md p-2 md:absolute md:-right-2 md:top-1/2 md:-translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="static border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground bg-background p-2 md:absolute md:-right-2 md:top-1/2 md:-translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
                         aria-label="Next testimonial"
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +164,7 @@ export const Testimonials = () => {
                                     setTimeout(() => setIsTransitioning(false), 500);
                                 }
                             }}
-                            className={`h-3 rounded-full transition-all duration-300 ${
+                            className={`h-3  transition-all duration-300 ${
                                 idx === currentIndex 
                                     ? 'w-8 bg-foreground' 
                                     : 'w-3 bg-foreground/30 hover:bg-foreground/50'
