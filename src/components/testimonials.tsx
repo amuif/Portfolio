@@ -1,6 +1,6 @@
 import { SectionHeading } from "./section-heading";
 import { User } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import { useState, useEffect, useCallback } from "react";
 
 const TESTIMONIALS = [
     {
@@ -27,45 +27,153 @@ const TESTIMONIALS = [
 ];
 
 export const Testimonials = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const nextSlide = useCallback(() => {
+        if (isTransitioning) return;
+        setIsTransitioning(true);
+        setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+        setTimeout(() => setIsTransitioning(false), 500);
+    }, [isTransitioning]);
+
+    const prevSlide = useCallback(() => {
+        if (isTransitioning) return;
+        setIsTransitioning(true);
+        setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+        setTimeout(() => setIsTransitioning(false), 500);
+    }, [isTransitioning]);
+
+    // Auto-play
+    useEffect(() => {
+        const timer = setInterval(nextSlide, 8000);
+        return () => clearInterval(timer);
+    }, [nextSlide]);
+
+    // Keyboard navigation
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') prevSlide();
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [nextSlide, prevSlide]);
+
+    // Touch swipe support
+    const [touchStart, setTouchStart] = useState<number | null>(null);
+    const [touchEnd, setTouchEnd] = useState<number | null>(null);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const handleTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > 50;
+        const isRightSwipe = distance < -50;
+
+        if (isLeftSwipe) nextSlide();
+        if (isRightSwipe) prevSlide();
+
+        setTouchStart(null);
+        setTouchEnd(null);
+    };
+
     return (
         <section id="testimonials" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
             <SectionHeading title="Testimonials" color="bg-yellow-100 dark:bg-yellow-900/40 text-foreground" />
             
-            {/* Added relative and px adjustments to give the side buttons breathing room on desktop */}
-            <Carousel opts={{loop:true}} className="relative w-full md:px-12">
-                <CarouselContent className="pb-0">
-                    {TESTIMONIALS.map((testimonial, idx) => (
-                        <CarouselItem key={idx} >
-                            <div className={`relative flex flex-col p-6 border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground ${testimonial.color}`}>
-                                <div className="flex items-center gap-4 mb-5 border-b-2 border-dashed border-foreground pb-4">
-                                    <div className="flex shrink-0 items-center justify-center h-12 w-12 rounded-full border-2 border-foreground bg-background text-foreground shadow-[2px_2px_0_0_var(--color-foreground)]">
-                                        <User className="h-6 w-6" />
+            <div className="relative w-full">
+                {/* Carousel Container */}
+                <div 
+                    className="relative overflow-hidden rounded-lg"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div 
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                        {TESTIMONIALS.map((testimonial, idx) => (
+                            <div 
+                                key={idx} 
+                                className="w-full shrink-0 px-0 md:px-12"
+                            >
+                                <div className={`relative flex flex-col p-6 border-4 border-foreground shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[8px_8px_0_0_var(--color-foreground)] text-foreground ${testimonial.color}`}>
+                                    <div className="flex items-center gap-4 mb-5 border-b-2 border-dashed border-foreground pb-4">
+                                        <div className="flex shrink-0 items-center justify-center h-12 w-12 rounded-full border-2 border-foreground bg-background text-foreground shadow-[2px_2px_0_0_var(--color-foreground)]">
+                                            <User className="h-6 w-6" />
+                                        </div>
+                                        <div>
+                                            <h3 className="font-black uppercase tracking-tight text-sm">{testimonial.name}</h3>
+                                            <p className="text-[10px] font-bold opacity-80 uppercase mt-0.5">{testimonial.role} @ {testimonial.company}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="font-black uppercase tracking-tight text-sm">{testimonial.name}</h3>
-                                        <p className="text-[10px] font-bold opacity-80 uppercase mt-0.5">{testimonial.role} @ {testimonial.company}</p>
+                                    <div className="flex-1">
+                                        <p className="font-medium text-sm leading-relaxed relative z-10">
+                                            <span className="absolute -left-3 -top-3 text-5xl opacity-20 font-serif font-black -z-10">"</span>
+                                            {testimonial.message}
+                                        </p>
                                     </div>
-                                </div>
-                                <div className="flex-1">
-                                    <p className="font-medium text-sm leading-relaxed relative z-10">
-                                        <span className="absolute -left-3 -top-3 text-5xl opacity-20 font-serif font-black -z-10">"</span>
-                                        {testimonial.message}
-                                    </p>
                                 </div>
                             </div>
-                        </CarouselItem>
-                    ))}
-                </CarouselContent>
-
-                {/* 
-                  Container forces buttons to layout horizontally centered at the bottom on mobile (`flex justify-center gap-4 mt-6`)
-                  On desktop (`md:...`), we reset the container layout so Shadcn's absolute positions take back over.
-                */}
-                <div className="flex justify-center gap-4 md:block">
-                    <CarouselPrevious size={'lg'} className="static -translate-y-4/3 border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] md:shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5  hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground md:absolute md:-left-4 md:top-1/2 md:-translate-y-1/2" />
-                    <CarouselNext className="static -translate-y-4/3 border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] md:shadow-[6px_6px_0_0_var(--color-foreground)] transition-transform hover:translate-x-0.5  hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground md:absolute md:-right-4 md:top-1/2 md:-translate-y-1/2" />
+                        ))}
+                    </div>
                 </div>
-            </Carousel>
+
+                {/* Navigation Buttons */}
+                <div className="flex justify-center gap-4 mt-6 md:block">
+                    <button
+                        onClick={prevSlide}
+                        disabled={isTransitioning}
+                        className="static border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground bg-background rounded-md p-2 md:absolute md:-left-2 md:top-1/2 md:-translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Previous testimonial"
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button
+                        onClick={nextSlide}
+                        disabled={isTransitioning}
+                        className="static border-4 border-foreground shadow-[4px_4px_0_0_var(--color-foreground)] transition-all hover:translate-x-0.5 hover:shadow-[6px_6px_0_0_var(--color-foreground)] text-foreground bg-background rounded-md p-2 md:absolute md:-right-2 md:top-1/2 md:-translate-y-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
+                        aria-label="Next testimonial"
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Dots Indicator */}
+                <div className="flex justify-center gap-2 mt-6">
+                    {TESTIMONIALS.map((_, idx) => (
+                        <button
+                            key={idx}
+                            onClick={() => {
+                                if (!isTransitioning) {
+                                    setIsTransitioning(true);
+                                    setCurrentIndex(idx);
+                                    setTimeout(() => setIsTransitioning(false), 500);
+                                }
+                            }}
+                            className={`h-3 rounded-full transition-all duration-300 ${
+                                idx === currentIndex 
+                                    ? 'w-8 bg-foreground' 
+                                    : 'w-3 bg-foreground/30 hover:bg-foreground/50'
+                            }`}
+                            aria-label={`Go to testimonial ${idx + 1}`}
+                        />
+                    ))}
+                </div>
+            </div>
         </section>
     );
 };
