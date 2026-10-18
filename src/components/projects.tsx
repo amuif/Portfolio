@@ -4,11 +4,11 @@ import { ArrowRight } from "lucide-react";
 
 const PROJECTS = [
     {
-        title: "SAAS Landing Page",
-        description: "A high-performance SaaS landing page built to showcase seamless user experiences and fluid micro-interactions. Focuses on structured layouts, optimized asset delivery, and responsive UI components.",
+        title: "Decide",
+        description: "Decide with data. Upload a CSV or Excel file and Decide profiles it, detects the business domain, recommends a decision for every row, and charts the results, all running entirely in your browser so the data never leaves your machine.",
         color: "bg-rose-100 dark:bg-rose-900/40 text-foreground",
-        tags: ["Vite", "GSAP", "TailwindCSS"],
-        live: "https://landingpagedemogsap.netlify.app/",
+        tags: ["Svelte 5", "TypeScript", "ECharts", "Dexie", "TailwindCSS", "Cloudflare Workers"],
+        live: "https://decide-analytics.amudiworks.workers.dev/",
         span: "md:col-span-2 md:row-span-1"
     },
     {

@@ -8,7 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "bun run build && bunx wrangler pages deploy",
+    "deploy:preview": "bun run build && bunx wrangler pages deploy --branch=preview",
+    "cf:preview": "bun run build && bunx wrangler pages dev"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",
@@ -43,6 +46,7 @@
     "prettier-plugin-tailwindcss": "^0.8.0",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^8.0.12",
+    "wrangler": "^4.151.1"
   }
 }
